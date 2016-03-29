@@ -12,3 +12,6 @@ lib
 
 # code coverage
 .nyc_output
+
+# test temp file
+*.temp
