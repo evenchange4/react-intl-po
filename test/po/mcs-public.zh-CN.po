@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mcs-public\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. [Device.creator] - Creator
+#: _translations/src/containers/Device/messages.json
+msgid "Creator"
+msgstr "建立者（簡中）"
+
+#. [Device.version] - Version
+#: _translations/src/containers/Device/messages.json
+msgid "Version"
+msgstr "版本（簡中）"

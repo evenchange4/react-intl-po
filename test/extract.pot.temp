@@ -1,0 +1,18 @@
+#: ./messages/src/containers/App/App.json
+#. [App.Creator] - Creator
+#: ./messages/src/containers/NotFound/messages.json
+#. [NotFound.Creator] - Creator
+msgid "Creator"
+msgstr ""
+
+#: ./messages/src/containers/App/App.json
+#. [App.errorButton] - Click error Button
+#: ./messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton] - Click error Button
+msgid "Go to MCS website"
+msgstr ""
+
+#: ./messages/src/containers/App/App.json
+#. [App.errorMessage] - The error message when api response as 404 not found
+msgid "The device is now private or deleted."
+msgstr ""

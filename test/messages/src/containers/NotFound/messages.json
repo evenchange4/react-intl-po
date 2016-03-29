@@ -1,0 +1,12 @@
+[
+  {
+    "id": "NotFound.errorButton",
+    "description": "Click error Button",
+    "defaultMessage": "Go to MCS website"
+  },
+  {
+    "id": "NotFound.Creator",
+    "description": "Creator",
+    "defaultMessage": "Creator"
+  }
+]
