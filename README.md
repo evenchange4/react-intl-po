@@ -1,6 +1,8 @@
 # react-intl-po
 
-> Convert a Float number to percentage with rounding, ceiling or flooring.
+> Extract POT from react-intl and convert back to json.
+>
+> messages.json → POT → PO → translation.json
 
 [![Travis][build-badge]][build] [![Coverage Status][coveralls-badge]][coveralls] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
 
@@ -28,46 +30,17 @@ $ npm install react-intl-po --save
 
 ## Usage
 
-```js
-import {
-  default as toPercentageBy,
-  toPercentage as defaultToPercentageBy,
-} from 'react-intl-po';
+```console
 
-// defaultToPercentageBy equals to toPercentageBy()
-
-var toPercentage = toPercentageBy();
-t.is(toPercentage(0.11111), '11.11%');
-t.is(defaultToPercentageBy(0.11111), '11.11%');
-
-var toPercentage = toPercentageBy(0);
-t.is(toPercentage(0.11111), '11%');
-
-var toPercentage = toPercentageBy(2, Math.ceil);
-t.is(toPercentage(0.11111), '11.12%');
-
-var toPercentage = toPercentageBy(2, Math.floor);
-t.is(toPercentage(0.11115), '11.11%');
 ```
 
 ## API
 
-```js
-type ToPercentage = (float: number) => string;
-
-toPercentageBy(
-  ?digits: number,
-  ?method: Function,
-): ToPercentage
+```
 ```
 
 ## Property
 
-| **Value** | **Default**  | **Notes**  |
-| ------- | ---------- | ------ |
-| digits  | 2          | The number of digits to appear after the decimal point |
-| method  | Math.round | Could be `Math.round`, `Math.ceil` or `Math.floor` method |
-| float  |  | The number to be converted. |
 
 ## Test
 

@@ -1,7 +1,7 @@
 {
   "name": "react-intl-po",
   "version": "0.0.0",
-  "description": "",
+  "description": "Extract POT from react-intl and convert back to json.",
   "author": "Michael Hsu",
   "license": "MIT",
   "bugs": {
