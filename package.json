@@ -13,6 +13,9 @@
     "url": "https://github.com/evenchange4/react-intl-po.git"
   },
   "main": "lib/index.js",
+  "bin": {
+    "rip": "lib/cli.js"
+  },
   "files": [
     "lib",
     "src",
@@ -84,6 +87,7 @@
     ]
   },
   "dependencies": {
+    "commander": "^2.9.0",
     "glob": "^7.0.3",
     "lodash": "^4.6.1",
     "po2json": "^0.4.1",
