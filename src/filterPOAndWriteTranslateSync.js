@@ -1,4 +1,6 @@
+/* eslint-disable no-console */
 import fs from 'fs';
+import chalk from 'chalk';
 import values from 'lodash/values';
 import flatten from 'lodash/flatten';
 import flowRight from 'lodash/flowRight';
@@ -22,6 +24,7 @@ function filterPOAndWriteTranslateSync(srcPatterns, { messagesPattern, output })
   }));
 
   fs.writeFileSync(output, JSON.stringify(result, null, 0));
+  console.log(chalk.green(`> [rip] write file -> ${output} ✔️\n`));
 }
 
 export default filterPOAndWriteTranslateSync;
