@@ -33,7 +33,7 @@ $ npm install react-intl-po --save
 
 ## Usage
 
-There are two scirpts:
+There are two sub-commands of `rip`:
 
 1. json2pot: Convert `babel-plugin-react-intl`'s output json file to one .pot file.
 2. po2json: Convert one translated .po file back to json format.
@@ -41,7 +41,7 @@ There are two scirpts:
 ### json2pot
 
 ```
-$ json2pot '_translations/src/**/*.json' \
+$ rip json2pot '_translations/src/**/*.json' \
     -o ./mcs-public.pot
 ```
 
@@ -53,7 +53,7 @@ $ json2pot '_translations/src/**/*.json' \
 ### po2json
 
 ```
-$ po2json './node_modules/mcs-translation/po/mcs-public*.po' \
+$ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
     -m './_translations/src/**/*.json' \
     -o './translations.json'
 ```
