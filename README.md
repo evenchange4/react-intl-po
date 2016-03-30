@@ -26,10 +26,13 @@
 $ npm install react-intl-po --save
 ```
 
-## Requirements
+## Requirements and Workflow
 
 - react-intl
 - babel-plugin-react-intl
+
+![RIP Workflow](./docs/workflow.png)
+
 
 ## Usage
 
