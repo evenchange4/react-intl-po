@@ -46,7 +46,7 @@ $ npm install react-intl-po --save
 
 ## Usage
 
-There are two sub-commands of `rip`:
+There are two sub-commands of `react-intl-po` or `rip`:
 
 1. json2pot: Convert `babel-plugin-react-intl`'s output json file to one .pot file.
 2. po2json: Convert one translated .po file back to json format.
