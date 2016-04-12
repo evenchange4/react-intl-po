@@ -12,7 +12,7 @@ test('should return messages object with default mapper', t => {
   const output = './translations.json.temp';
 
   filterPOAndWriteTranslateSync('./po/mcs-public.*.po', { messagesPattern, output });
-  t.same(
+  t.deepEqual(
     JSON.parse(fs.readFileSync(output, 'utf8')),
     {
       'zh-CN': {

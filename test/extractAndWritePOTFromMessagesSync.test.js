@@ -23,11 +23,11 @@ test('should return messages object with default mapper', t => {
     '#. [App.errorButton] - Click error Button' + '\n' +
     '#: ./messages/src/containers/NotFound/messages.json' + '\n' +
     '#. [NotFound.errorButton] - Click error Button' + '\n' +
-    'msgid \"Go to MCS website\"' + '\n' +
-    'msgstr \"\"' + '\n\n' +
+    'msgid "Go to MCS website"' + '\n' +
+    'msgstr ""' + '\n\n' +
     '#: ./messages/src/containers/App/App.json' + '\n' +
     '#. [App.errorMessage] - The error message when api response as 404 not found' + '\n' +
-    'msgid \"The device is now private or deleted.\"' + '\n' +
-    'msgstr \"\"' + '\n',
+    'msgid "The device is now private or deleted."' + '\n' +
+    'msgstr ""' + '\n',
   );
 });

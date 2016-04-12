@@ -4,14 +4,6 @@ node_js:
   - "4"
   - "4.2.2"
 
-# fail asap when there is a failure
-matrix:
-  fast_finish: true
-
-cache:
-  directories:
-    - node_modules
-
 notifications:
   email: evenchange4@gmail.com
 

@@ -24,7 +24,7 @@ function filterPOAndWriteTranslateSync(srcPatterns, { messagesPattern, output })
   }));
 
   fs.writeFileSync(output, JSON.stringify(result, null, 0));
-  console.log(chalk.green(`> [rip] write file -> ${output} ✔️\n`));
+  console.log(chalk.green(`> [react-intl-po] write file -> ${output} ✔️\n`));
 }
 
 export default filterPOAndWriteTranslateSync;
