@@ -12,7 +12,7 @@ function extractAndWritePOTFromMessagesSync(srcPatterns, { output }) {
   )(srcPatterns);
 
   fs.writeFileSync(output, result);
-  console.log(chalk.green(`> [rip] write file -> ${output} ✔️\n`));
+  console.log(chalk.green(`> [react-intl-po] write file -> ${output} ✔️\n`));
 }
 
 export default extractAndWritePOTFromMessagesSync;

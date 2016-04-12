@@ -6,7 +6,7 @@ test('should return a function', t => {
 });
 
 test('should return messages object with default mapper', t => {
-  t.same(
+  t.deepEqual(
     readAllMessageAsObjectSync('./messages/**/*.json'),
     {
       'The device is now private or deleted.': [
@@ -50,7 +50,7 @@ test('should return messages object with default mapper', t => {
 });
 
 test('should return messages object with description as key', t => {
-  t.same(
+  t.deepEqual(
     readAllMessageAsObjectSync(
       './messages/**/App.json',
       (message, filename) => ({ [message.description]: [{ ...message, filename }]})
