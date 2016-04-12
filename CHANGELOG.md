@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.0.4]
+> Apr 12, 2016
+
 * chore(ava): update lint and test
 * chore(codecov): switch to use codecov
 * chore(alias): use full name of package
