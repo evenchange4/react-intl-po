@@ -27,7 +27,7 @@ test('should return pot formatted string', t => {
     '#. [App.errorButton] - Click error Button' + '\n' +
     '#: ./messages/src/containers/NotFound/messages.json' + '\n' +
     '#. [NotFound.errorButton] - Click error Button' + '\n' +
-    'msgid \"Go to MCS website\"' + '\n' +
-    'msgstr \"\"' + '\n',
+    'msgid "Go to MCS website"' + '\n' +
+    'msgstr ""' + '\n',
   );
 });
