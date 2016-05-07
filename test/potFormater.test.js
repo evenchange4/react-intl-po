@@ -23,11 +23,11 @@ test('should return pot formatted string', t => {
         },
       ],
     }),
-    '#: ./messages/src/containers/App/App.json' + '\n' +
-    '#. [App.errorButton] - Click error Button' + '\n' +
-    '#: ./messages/src/containers/NotFound/messages.json' + '\n' +
-    '#. [NotFound.errorButton] - Click error Button' + '\n' +
-    'msgid "Go to MCS website"' + '\n' +
-    'msgstr ""' + '\n',
+    '#: ./messages/src/containers/App/App.json\n' +
+    '#. [App.errorButton] - Click error Button\n' +
+    '#: ./messages/src/containers/NotFound/messages.json\n' +
+    '#. [NotFound.errorButton] - Click error Button\n' +
+    'msgid "Go to MCS website"\n' +
+    'msgstr ""\n',
   );
 });
