@@ -49,7 +49,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.8.0",
     "codecov": "^1.0.1",
-    "eslint": "^2.13.0",
+    "eslint": "^3.2.2",
     "lint-config-m": "^1.1.1",
     "nyc": "^7.1.0"
   },
