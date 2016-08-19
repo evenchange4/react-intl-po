@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 import fs from 'fs';
+import path from 'path';
+import mkdirp from 'mkdirp';
 import chalk from 'chalk';
 import values from 'lodash/values';
 import flatten from 'lodash/flatten';
@@ -23,6 +25,7 @@ function filterPOAndWriteTranslateSync(srcPatterns, { messagesPattern, output })
     })),
   }));
 
+  mkdirp(path.dirname(output)); // ensure the output folder exists
   fs.writeFileSync(output, JSON.stringify(result, null, 0));
   console.log(chalk.green(`> [react-intl-po] write file -> ${output} ✔️\n`));
 }
