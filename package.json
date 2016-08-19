@@ -92,6 +92,7 @@
     "commander": "^2.9.0",
     "glob": "^7.0.3",
     "lodash": "^4.10.0",
+    "mkdirp": "^0.5.1",
     "po2json": "^0.4.1",
     "to-object-by": "^1.0.2"
   }
