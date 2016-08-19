@@ -3,6 +3,12 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.0.6]
+> Aug 19, 2016
+
+* chore(modules): upgrade dependency
+* feat(filterPOAndWriteTranslateSync): ensure the output folder exists. ([@wuct](https://github.com/wuct) in [#27])
+
 ## [v1.0.4]
 > Apr 12, 2016
 
