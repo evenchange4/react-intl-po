@@ -69,13 +69,15 @@ $ rip json2pot '_translations/src/**/*.json' \
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
     -m './_translations/src/**/*.json' \
     -o './translations.json'
+    [--multi]
 ```
 
-| **Arguments**          |  **Description**                                |
-| ---------------------- | ----------------------------------------------- |
-| `srcPatterns`          |  translated `.po` files                         |
-| `messagesPattern (-m)` |  `babel-plugin-react-intl`'s output json file   |
-| `output (-o)`          |  ouput one json formated file to be used in SSR |
+| **Arguments**          |  **Description**                                 |
+| ---------------------- | ------------------------------------------------ |
+| `srcPatterns`          |  translated `.po` files                          |
+| `messagesPattern (-m)` |  `babel-plugin-react-intl`'s output json file    |
+| `output (-o)`          |  output one json formated file to be used in SSR |
+| `--multi`              |  output one json file for each po input file     |
 
 
 ## API
