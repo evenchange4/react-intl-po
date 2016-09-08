@@ -10,7 +10,7 @@ import toObjectBy from 'to-object-by';
 import readAllMessageAsObjectSync from './readAllMessageAsObjectSync';
 import readAllPOAsObjectSync from './readAllPOAsObjectSync';
 
-function filterPOAndWriteTranslateSync(srcPatterns, { messagesPattern, output }) {
+function filterPOAndWriteTranslateSync(srcPatterns, { messagesPattern, output, multi = false }) {
   const translationTable = readAllPOAsObjectSync(srcPatterns);
   const messageList = flowRight(
     flatten,                    // 3. return flatten object values
@@ -25,14 +25,19 @@ function filterPOAndWriteTranslateSync(srcPatterns, { messagesPattern, output })
     })),
   }));
 
-  mkdirp(path.dirname(output)); // ensure the output folder exists
+  if (multi) {
+    mkdirp.sync(output);
 
-  if(fs.lstatSync(output).isDirectory()) //if 'output' is a directory generate one file for each input file.
-    for(let lang of Object.keys(result))
+    Object.keys(result).map(lang => {
       fs.writeFileSync(path.join(output, `${lang}.json`), JSON.stringify(result[lang], null, 0));
-  else //else write full result in 'output'
+      console.log(chalk.green(
+        `> [react-intl-po] write file -> ${path.join(output, `${lang}.json`)} ✔️`));
+    })
+  } else {
+    mkdirp.sync(path.dirname(output)); // ensure the output folder exists
     fs.writeFileSync(output, JSON.stringify(result, null, 0));
-  console.log(chalk.green(`> [react-intl-po] write file -> ${output} ✔️\n`));
+    console.log(chalk.green(`> [react-intl-po] write file -> ${output} ✔️\n`));
+  }
 }
 
 export default filterPOAndWriteTranslateSync;
