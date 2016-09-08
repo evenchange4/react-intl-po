@@ -26,7 +26,12 @@ function filterPOAndWriteTranslateSync(srcPatterns, { messagesPattern, output })
   }));
 
   mkdirp(path.dirname(output)); // ensure the output folder exists
-  fs.writeFileSync(output, JSON.stringify(result, null, 0));
+
+  if(fs.lstatSync(output).isDirectory()) //if 'output' is a directory generate one file for each input file.
+    for(let lang of Object.keys(result))
+      fs.writeFileSync(path.join(output, `${lang}.json`), JSON.stringify(result[lang], null, 0));
+  else //else write full result in 'output'
+    fs.writeFileSync(output, JSON.stringify(result, null, 0));
   console.log(chalk.green(`> [react-intl-po] write file -> ${output} ✔️\n`));
 }
 
