@@ -9,7 +9,7 @@ test('should return a function', t => {
 
 test('should return messages object with default mapper', t => {
   const messagesPattern = './messages/**/*.json';
-  const output = './translations.json';
+  const output = './temp/translations.json';
 
   filterPOAndWriteTranslateSync('./po/mcs-public.*.po', { messagesPattern, output });
   t.deepEqual(
@@ -29,7 +29,7 @@ test('should return messages object with default mapper', t => {
 
 test('should return different objects if multifile option is enabled', t => {
   const messagesPattern = './messages/**/*.json';
-  const output = './translations';
+  const output = './temp/translations';
   const multi = true;
 
   filterPOAndWriteTranslateSync('./po/mcs-public.*.po', { messagesPattern, output, multi });

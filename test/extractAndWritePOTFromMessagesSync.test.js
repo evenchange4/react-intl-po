@@ -8,7 +8,7 @@ test('should return a function', t => {
 });
 
 test('should return messages object with default mapper', t => {
-  const output = './extract.pot.temp';
+  const output = './temp/extract.pot';
 
   extractAndWritePOTFromMessagesSync('./messages/**/*.json', { output });
   t.is(

@@ -15,4 +15,4 @@ lib
 coverage/
 
 # test temp file
-*.temp
+test/temp/*

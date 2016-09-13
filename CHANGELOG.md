@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* test(structure): move output .temp file into the temp folder for gitignore.
+
 ## [v1.0.6]
 > Aug 19, 2016
 
