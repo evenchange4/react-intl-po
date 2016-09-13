@@ -48,8 +48,8 @@ $ npm install react-intl-po --save
 
 There are two sub-commands of `react-intl-po` or `rip`:
 
-1. json2pot: Convert the json files extracted from *babel-plugin-react-intl* into one *.pot* file.
-2. po2json: Convert translated *.po* files back to *json* format.
+1. json2pot: Convert the json files extracted from *babel-plugin-react-intl* into one `.pot` file.
+2. po2json: Convert translated *.po* files back to `.json` format.
 
 ### json2pot
 
@@ -58,14 +58,14 @@ $ rip json2pot '_translations/src/**/*.json' \
     -o ./mcs-public.pot
 ```
 
-| **Arguments** |  **Description**                                                      |
-| ------------- | --------------------------------------------------------------------- |
-| `srcPatterns` |  The pattern of *json* files extracted from *babel-plugin-react-intl* |
-| `output (-o)` |  The output pathname of *.pot* file to be translated                  |
+| **Arguments** |  **Description**                                                       |
+| ------------- | ---------------------------------------------------------------------- |
+| `srcPatterns` |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
+| `output (-o)` |  The output pathname of *.pot* file to be translated                   |
 
 ### po2json
 
-#### Case 1: Output one file per locale if a *directory* is set
+#### Case 1: Output one file per locale if a `directory` is set
 
 ```
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
@@ -73,7 +73,7 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
      -o './translations'
 ```
 
-#### Case 2: Output one merged file if a *json file* is set
+#### Case 2: Output one merged file if a `.json file` is set
 
 ```
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
@@ -81,11 +81,11 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
      -o './translations.json'
 ```
 
-| **Arguments**          |  **Description**                                                      |
-| ---------------------- | --------------------------------------------------------------------- |
-| `srcPatterns`          |  The pattern of translated *.po* files                                |
-| `messagesPattern (-m)` |  The pattern of *json* files extracted from *babel-plugin-react-intl* |
-| `output (-o)`          |  The output pathname of a file / directory                            |
+| **Arguments**          |  **Description**                                                       |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `srcPatterns`          |  The pattern of translated *.po* files                                 |
+| `messagesPattern (-m)` |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
+| `output (-o)`          |  The output pathname of a file / directory                             |
 
 
 ## API
