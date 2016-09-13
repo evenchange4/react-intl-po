@@ -7,7 +7,7 @@ test('should return a function', t => {
   t.is(typeof filterPOAndWriteTranslateSync, 'function');
 });
 
-test('should return messages object with default mapper', t => {
+test('should output one merged file if a *json file* is set', t => {
   const messagesPattern = './messages/**/*.json';
   const output = './temp/translations.json';
 
@@ -27,12 +27,11 @@ test('should return messages object with default mapper', t => {
   );
 });
 
-test('should return different objects if multifile option is enabled', t => {
+test('should output one file per locale if a *directory* is set', t => {
   const messagesPattern = './messages/**/*.json';
   const output = './temp/translations';
-  const multi = true;
 
-  filterPOAndWriteTranslateSync('./po/mcs-public.*.po', { messagesPattern, output, multi });
+  filterPOAndWriteTranslateSync('./po/mcs-public.*.po', { messagesPattern, output });
   t.deepEqual(
     JSON.parse(fs.readFileSync(`${output}/zh-CN.json`, 'utf8')),
     {

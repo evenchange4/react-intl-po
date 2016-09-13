@@ -48,8 +48,8 @@ $ npm install react-intl-po --save
 
 There are two sub-commands of `react-intl-po` or `rip`:
 
-1. json2pot: Convert `babel-plugin-react-intl`'s output json file to one .pot file.
-2. po2json: Convert one translated .po file back to json format.
+1. json2pot: Convert the json files extracted from *babel-plugin-react-intl* into one *.pot* file.
+2. po2json: Convert translated *.po* files back to *json* format.
 
 ### json2pot
 
@@ -58,26 +58,34 @@ $ rip json2pot '_translations/src/**/*.json' \
     -o ./mcs-public.pot
 ```
 
-| **Arguments** |  **Description**                              |
-| ------------- | --------------------------------------------- |
-| `srcPatterns` |  `babel-plugin-react-intl`'s output json file |
-| `output (-o)` |  `.pot` file to be translated                 |
+| **Arguments** |  **Description**                                                      |
+| ------------- | --------------------------------------------------------------------- |
+| `srcPatterns` |  The pattern of *json* files extracted from *babel-plugin-react-intl* |
+| `output (-o)` |  The output pathname of *.pot* file to be translated                  |
 
 ### po2json
 
+#### Case 1: Output one file per locale if a *directory* is set
+
 ```
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
-    -m './_translations/src/**/*.json' \
-    -o './translations.json'
-    [--multi]
+     -m './_translations/src/**/*.json' \
+     -o './translations'
 ```
 
-| **Arguments**          |  **Description**                                 |
-| ---------------------- | ------------------------------------------------ |
-| `srcPatterns`          |  translated `.po` files                          |
-| `messagesPattern (-m)` |  `babel-plugin-react-intl`'s output json file    |
-| `output (-o)`          |  output one json formated file to be used in SSR |
-| `--multi`              |  output one json file for each po input file     |
+#### Case 2: Output one merged file if a *json file* is set
+
+```
+$ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
+     -m './_translations/src/**/*.json' \
+     -o './translations.json'
+```
+
+| **Arguments**          |  **Description**                                                      |
+| ---------------------- | --------------------------------------------------------------------- |
+| `srcPatterns`          |  The pattern of translated *.po* files                                |
+| `messagesPattern (-m)` |  The pattern of *json* files extracted from *babel-plugin-react-intl* |
+| `output (-o)`          |  The output pathname of a file / directory                            |
 
 
 ## API

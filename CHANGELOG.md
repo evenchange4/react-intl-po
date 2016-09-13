@@ -4,6 +4,7 @@
 > Unreleased
 
 * test(structure): move output .temp file into the temp folder for gitignore.
+* feat(po2json): added generation of one output file per input if the specified output is a folder. [@MorrisGallego](https://github.com/MorrisGallego) in [#29]
 
 ## [v1.0.6]
 > Aug 19, 2016
