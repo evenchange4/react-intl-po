@@ -4,7 +4,7 @@ import mapValues from 'lodash/mapValues';
 import toObjectBy from 'to-object-by';
 
 const DEFAULT_MAPPER = (filename) =>
-  filename.match(/[^.]\.(.*)\.po$/)[1];
+  filename.match(/([^.]*\.)*([^.]+)\.po$/)[2];
 
 /**
  * Read translated .po file synchronized and
