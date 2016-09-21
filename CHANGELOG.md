@@ -3,11 +3,16 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.0.8]
+> Sep 21, 2016
+
+* fix(DEFAULT_MAPPER): prefix is not required anymore. ([@eliseumds](https://github.com/eliseumds) in [#19], [@MorrisGallego](https://github.com/MorrisGallego) in [#34])
+
 ## [v1.0.7]
 > Sep 13, 2016
 
 * test(structure): move output .temp file into the temp folder for gitignore.
-* feat(po2json): added generation of one output file per input if the specified output is a folder. [@MorrisGallego](https://github.com/MorrisGallego) in [#29]
+* feat(po2json): added generation of one output file per input if the specified output is a folder. ([@MorrisGallego](https://github.com/MorrisGallego) in [#29])
 
 ## [v1.0.6]
 > Aug 19, 2016
