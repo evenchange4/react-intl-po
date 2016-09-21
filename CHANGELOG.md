@@ -3,7 +3,7 @@
 ## [HEAD]
 > Unreleased
 
-## [v1.0.8]
+## [v1.0.9]
 > Sep 21, 2016
 
 * fix(DEFAULT_MAPPER): prefix is not required anymore. ([@eliseumds](https://github.com/eliseumds) in [#19], [@MorrisGallego](https://github.com/MorrisGallego) in [#34])

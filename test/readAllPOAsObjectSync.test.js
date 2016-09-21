@@ -13,9 +13,13 @@ test('should return locale when DEFAULT_MAPPER w/o prefix', t => {
   t.is(defaultMapper('mcs-public.zh-TW.po'), 'zh-TW');
   t.is(defaultMapper('mcs-public.en.po'), 'en');
 
-  t.is(defaultMapper('mcs-public.zh-cn.po'), 'zh-cn');
-  t.is(defaultMapper('mcs-public.zh-tw.po'), 'zh-tw');
-  t.is(defaultMapper('mcs-public.en.po'), 'en');
+  t.is(defaultMapper('./node_modules/mcs-translation/po/mcs-public.zh-cn.po'), 'zh-cn');
+  t.is(defaultMapper('./node_modules/mcs-translation/po/mcs-public.zh-tw.po'), 'zh-tw');
+  t.is(defaultMapper('./node_modules/mcs-translation/po/mcs-public.en.po'), 'en');
+
+  t.is(defaultMapper('./node_modules/mcs-translation/po/zh-CN.po'), 'zh-CN');
+  t.is(defaultMapper('./node_modules/mcs-translation/po/zh-TW.po'), 'zh-TW');
+  t.is(defaultMapper('./node_modules/mcs-translation/po/en.po'), 'en');
 
   t.is(defaultMapper('zh-CN.po'), 'zh-CN');
   t.is(defaultMapper('zh-TW.po'), 'zh-TW');
