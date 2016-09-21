@@ -3,7 +3,7 @@ import po2json from 'po2json';
 import mapValues from 'lodash/mapValues';
 import toObjectBy from 'to-object-by';
 
-const DEFAULT_MAPPER = (filename) =>
+export const DEFAULT_MAPPER = (filename) =>
   filename.match(/([^.]*\.)*([^.]+)\.po$/)[2];
 
 /**

@@ -1,8 +1,25 @@
 import test from 'ava';
-import readAllPOAsObjectSync from '../src/readAllPOAsObjectSync';
+import {
+  default as readAllPOAsObjectSync,
+  DEFAULT_MAPPER as defaultMapper,
+} from '../src/readAllPOAsObjectSync';
 
 test('should return a function', t => {
   t.is(typeof readAllPOAsObjectSync, 'function');
+});
+
+test('should return locale when DEFAULT_MAPPER w/o prefix', t => {
+  t.is(defaultMapper('mcs-public.zh-CN.po'), 'zh-CN');
+  t.is(defaultMapper('mcs-public.zh-TW.po'), 'zh-TW');
+  t.is(defaultMapper('mcs-public.en.po'), 'en');
+
+  t.is(defaultMapper('mcs-public.zh-cn.po'), 'zh-cn');
+  t.is(defaultMapper('mcs-public.zh-tw.po'), 'zh-tw');
+  t.is(defaultMapper('mcs-public.en.po'), 'en');
+
+  t.is(defaultMapper('zh-CN.po'), 'zh-CN');
+  t.is(defaultMapper('zh-TW.po'), 'zh-TW');
+  t.is(defaultMapper('en.po'), 'en');
 });
 
 test('should return po object with default localeMapper', t => {
