@@ -51,7 +51,7 @@
     "codecov": "^1.0.1",
     "eslint": "^2.13.0",
     "lint-config-m": "^1.1.1",
-    "nyc": "^7.1.0"
+    "nyc": "^8.3.2"
   },
   "babel": {
     "presets": [
