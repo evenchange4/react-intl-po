@@ -5,12 +5,12 @@ import flowRight from 'lodash/flowRight';
 import readAllMessageAsObjectSync from './readAllMessageAsObjectSync';
 import potFormater from './potFormater';
 
-const CUSTOM_KEY_MAPPER = (message, messageKey, filename) => ({
-  [message[messageKey]]: [{ ...message, filename }]
+const customKeyMapper = (message, messageKey, filename) => ({
+  [message[messageKey]]: [{ ...message, filename }],
 });
 
 const customKeyMapperFactory = (messageKey = 'defaultMessage') =>
-  (message, filename) => CUSTOM_KEY_MAPPER(message, messageKey, filename);
+  (message, filename) => customKeyMapper(message, messageKey, filename);
 
 function extractAndWritePOTFromMessagesSync(srcPatterns, { messageKey, output }) {
   const mapper = messageKey ? customKeyMapperFactory(messageKey) : undefined;
