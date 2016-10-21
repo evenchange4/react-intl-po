@@ -31,3 +31,32 @@ test('should return messages object with default mapper', t => {
     'msgstr ""\n',
   );
 });
+
+test('should return messages object with custom message key mapper', t => {
+  const output = './temp/extract.pot';
+
+  extractAndWritePOTFromMessagesSync('./messages/**/*.json', { messageKey: 'id', output });
+  t.is(
+    fs.readFileSync(output, 'utf8'),
+    '#: ./messages/src/containers/App/App.json\n' +
+    '#. [App.Creator] - Creator\n' +
+    'msgid "App.Creator"\n' +
+    'msgstr ""\n\n' +
+    '#: ./messages/src/containers/App/App.json\n' +
+    '#. [App.errorButton] - Click error Button\n' +
+    'msgid "App.errorButton"\n' +
+    'msgstr ""\n\n' +
+    '#: ./messages/src/containers/App/App.json\n' +
+    '#. [App.errorMessage] - The error message when api response as 404 not found\n' +
+    'msgid "App.errorMessage"\n' +
+    'msgstr ""\n\n' +
+    '#: ./messages/src/containers/NotFound/messages.json\n' +
+    '#. [NotFound.Creator] - Creator\n' +
+    'msgid "NotFound.Creator"\n' +
+    'msgstr ""\n\n' +
+    '#: ./messages/src/containers/NotFound/messages.json\n' +
+    '#. [NotFound.errorButton] - Click error Button\n' +
+    'msgid "NotFound.errorButton"\n' +
+    'msgstr ""\n'
+  );
+});

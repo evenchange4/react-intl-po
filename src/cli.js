@@ -5,6 +5,7 @@ import program from 'commander';
 program
   .command('json2pot <srcPatterns>')
   .option('-o, --output <path>', 'The output pathname of `.pot` file to be translated')
+  .option('-k, --message-key [key]', 'Translation message key (default key is `defaultMessage`)')
   .action(require('./extractAndWritePOTFromMessagesSync'));
 
 program
@@ -14,6 +15,7 @@ program
     'The pattern of *json* files extracted from *babel-plugin-react-intl*',
   )
   .option('-o, --output <path>', 'The output pathname of a file / directory')
+  .option('-k, --message-key [key]', 'Translation message key (default key is `defaultMessage`)')
   .action(require('./filterPOAndWriteTranslateSync'));
 
 program.parse(process.argv);
