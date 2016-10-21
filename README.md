@@ -101,8 +101,19 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 
 ### How to translate the same message into two different meanings?
 
-- Set the `message-key (-k)` to `'id'` of message object from *babel-plugin-react-intl* (default key is `'defaultMessage'`). ([#41](https://github.com/evenchange4/react-intl-po/pull/41))
+Set the `message-key (-k)` to `'id'` of message object from *babel-plugin-react-intl* (default key is `'defaultMessage'`). ([#41](https://github.com/evenchange4/react-intl-po/pull/41))
 
+```
+$ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
+     -m './_translations/src/**/*.json' \
+     -o './translations' \
+     -k 'id'
+
+$ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
+    -m './_translations/src/**/*.json' \
+    -o './translations.json' \
+    -k 'id'
+```
 
 ## Test
 
