@@ -58,10 +58,11 @@ $ rip json2pot '_translations/src/**/*.json' \
     -o ./mcs-public.pot
 ```
 
-| **Arguments** |  **Description**                                                       |
-| ------------- | ---------------------------------------------------------------------- |
-| `srcPatterns` |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
-| `output (-o)` |  The output pathname of *.pot* file to be translated                   |
+| **Arguments**      |  **Description**                                                       |
+| ------------------ | ---------------------------------------------------------------------- |
+| `srcPatterns`      |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
+| `output (-o)`      |  The output pathname of *.pot* file to be translated                   |
+| `message-key (-k)` |  [Optional] Translation message key (default key is `defaultMessage`)  |
 
 ### po2json
 
@@ -86,6 +87,7 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 | `srcPatterns`          |  The pattern of translated *.po* files                                 |
 | `messagesPattern (-m)` |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
 | `output (-o)`          |  The output pathname of a file / directory                             |
+| `message-key (-k)`     |  [Optional] Translation message key (default key is `defaultMessage`)  |
 
 
 ## API
@@ -94,6 +96,12 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 ```
 
 ## Property
+
+## Q&A
+
+### How to translate the same message into two different meanings?
+
+- Set the `message-key (-k)` to `'key'` of message object from *babel-plugin-react-intl* (default key is `'defaultMessage'`). ([#41](https://github.com/evenchange4/react-intl-po/pull/41))
 
 
 ## Test

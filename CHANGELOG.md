@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* feat(messageKey): Added feature where you can pass the message key and use something else than defaultMessage. ([@janzal](https://github.com/janzal) in [#41])
+
 ## [v1.0.9]
 > Sep 21, 2016
 
