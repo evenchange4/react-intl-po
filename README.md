@@ -58,11 +58,12 @@ $ rip json2pot '_translations/src/**/*.json' \
     -o ./mcs-public.pot
 ```
 
-| **Arguments**      |  **Description**                                                       |
-| ------------------ | ---------------------------------------------------------------------- |
-| `srcPatterns`      |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
-| `output (-o)`      |  The output pathname of *.pot* file to be translated                   |
-| `message-key (-k)` |  [Optional] Translation message key (default key is `defaultMessage`)  |
+| **Arguments**        |  **Description**                                                       |
+| -------------------- | ---------------------------------------------------------------------- |
+| `srcPatterns`        |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
+| `output (-o)`        |  The output pathname of *.pot* file to be translated                   |
+| `message-key (-k)`   |  [Optional] Translation message ID key (default key is `defaultMessage`)  |
+| `message-value (-v)` |  [Optional] Translation message value key (default is to leave `msgstr` empty)  |
 
 ### po2json
 
@@ -113,6 +114,17 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
     -m './_translations/src/**/*.json' \
     -o './translations.json' \
     -k 'id'
+```
+
+### How to generate `*.po` instead of `*.pot`
+
+Set the `message-value (-v)` to `'defaultMessage'` of message object from *babel-plugin-react-intl*. The default behaviour omits values to generate a template file instead of a specific locale.
+
+```
+$ rip json2pot '_translations/src/**/*.json' \
+    -o './mcs-public.po' \
+    -k 'id' \
+    -v 'defaultMessage'
 ```
 
 ## Test
