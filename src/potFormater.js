@@ -22,10 +22,10 @@ const potCommentsFormater = (messageList) =>
  * @author Michael Hsu
  */
 
-const potFormater = (messageObject) =>
+const potFormater = (messageValue) => (messageObject) =>
   Object.keys(messageObject) // return array of id
     .sort()
-    .map(id => `${potCommentsFormater(messageObject[id])}msgid "${id}"\nmsgstr ""\n`)
+    .map(id => `${potCommentsFormater(messageObject[id])}msgid "${id}"\nmsgstr "${messageValue ? messageObject[id][0][messageValue] : ''}"\n`)
     .join('\n');
 
 export default potFormater;
