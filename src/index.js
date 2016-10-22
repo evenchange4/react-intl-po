@@ -8,6 +8,7 @@ export default {
   extractAndWritePOTFromMessagesSync,
   filterPOAndWriteTranslateSync,
   potFormater: potFormater(null),
+  potFormaterFactory: potFormater,
   readAllMessageAsObjectSync,
   readAllPOAsObjectSync,
 };
