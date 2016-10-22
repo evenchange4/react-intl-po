@@ -2,12 +2,12 @@ import test from 'ava';
 import potFormater from '../src/potFormater';
 
 test('should return a function', t => {
-  t.is(typeof potFormater, 'function');
+  t.is(typeof potFormater(null), 'function');
 });
 
 test('should return pot formatted string', t => {
   t.is(
-    potFormater({
+    potFormater(null)({
       'Go to MCS website': [
         {
           id: 'App.errorButton',

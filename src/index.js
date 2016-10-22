@@ -7,7 +7,8 @@ import readAllPOAsObjectSync from './readAllPOAsObjectSync';
 export default {
   extractAndWritePOTFromMessagesSync,
   filterPOAndWriteTranslateSync,
-  potFormater,
+  potFormater: potFormater(null),
+  potFormaterFactory: potFormater,
   readAllMessageAsObjectSync,
   readAllPOAsObjectSync,
 };

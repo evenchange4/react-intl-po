@@ -12,11 +12,11 @@ const customKeyMapper = (message, messageKey, filename) => ({
 const customKeyMapperFactory = (messageKey = 'defaultMessage') =>
   (message, filename) => customKeyMapper(message, messageKey, filename);
 
-function extractAndWritePOTFromMessagesSync(srcPatterns, { messageKey, output }) {
+function extractAndWritePOTFromMessagesSync(srcPatterns, { messageKey, messageValue, output }) {
   const mapper = messageKey ? customKeyMapperFactory(messageKey) : undefined;
 
   const result = flowRight(
-    potFormater,                // 2. return formated string
+    potFormater(messageValue),  // 2. return formated string
     readAllMessageAsObjectSync, // 1. return messages object
   )(srcPatterns, mapper);
 
