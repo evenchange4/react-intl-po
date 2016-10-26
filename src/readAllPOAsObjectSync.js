@@ -4,7 +4,7 @@ import po2json from 'po2json';
 import mapValues from 'lodash/mapValues';
 import toObjectBy from 'to-object-by';
 
-export const DEFAULT_MAPPER = (filepath) =>
+export const DEFAULT_MAPPER = filepath =>
   path.basename(filepath).match(/([^.]*\.)*([^.]+)\.po$/)[2];
 
 /**
@@ -20,7 +20,7 @@ export const DEFAULT_MAPPER = (filepath) =>
 function readAllPOAsObjectSync(srcPatterns, localeMapper = DEFAULT_MAPPER) {
   const filepaths = globSync(srcPatterns);
 
-  return toObjectBy(filepaths, filepath => {
+  return toObjectBy(filepaths, (filepath) => {
     const json = po2json.parseFileSync(filepath);
     const translated = mapValues(json, o => o[1]); // omit plural
     const locale = localeMapper(filepath);         // parse locale name

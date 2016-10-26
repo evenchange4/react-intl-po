@@ -3,11 +3,11 @@ import test from 'ava';
 import extractAndWritePOTFromMessagesSync
   from '../src/extractAndWritePOTFromMessagesSync';
 
-test('should return a function', t => {
+test('should return a function', (t) => {
   t.is(typeof extractAndWritePOTFromMessagesSync, 'function');
 });
 
-test('should return messages object with default mapper', t => {
+test('should return messages object with default mapper', (t) => {
   const output = './temp/extract.pot';
 
   extractAndWritePOTFromMessagesSync('./messages/**/*.json', { output });
@@ -32,7 +32,7 @@ test('should return messages object with default mapper', t => {
   );
 });
 
-test('should return messages object with custom message key mapper', t => {
+test('should return messages object with custom message key mapper', (t) => {
   const output = './temp/extract.pot';
 
   extractAndWritePOTFromMessagesSync('./messages/**/*.json', { messageKey: 'id', output });

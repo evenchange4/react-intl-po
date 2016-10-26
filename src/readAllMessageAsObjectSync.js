@@ -24,7 +24,7 @@ function readAllMessageAsObjectSync(srcPatterns, messageMapper = DEFAULT_MAPPER)
     // 1. read messages
     .map(filename => ({ filename, messages: JSON.parse(fs.readFileSync(filename, 'utf8')) }))
     // 2. convert message list to object by defaultMessage
-    .map(({ filename, messages }) => toObjectBy(messages, (e) => messageMapper(e, filename)))
+    .map(({ filename, messages }) => toObjectBy(messages, e => messageMapper(e, filename)))
     // 3. aggregate objects (merge and concat)
     .reduce((acc, object) => mergeWith(acc, object, (accValue, objectValue) => {
       if (!isArray(accValue)) return objectValue;

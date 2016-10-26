@@ -1,11 +1,11 @@
 import test from 'ava';
 import readAllMessageAsObjectSync from '../src/readAllMessageAsObjectSync';
 
-test('should return a function', t => {
+test('should return a function', (t) => {
   t.is(typeof readAllMessageAsObjectSync, 'function');
 });
 
-test('should return messages object with default mapper', t => {
+test('should return messages object with default mapper', (t) => {
   t.deepEqual(
     readAllMessageAsObjectSync('./messages/**/*.json'),
     {
@@ -49,7 +49,7 @@ test('should return messages object with default mapper', t => {
   );
 });
 
-test('should return messages object with description as key', t => {
+test('should return messages object with description as key', (t) => {
   t.deepEqual(
     readAllMessageAsObjectSync(
       './messages/**/App.json',

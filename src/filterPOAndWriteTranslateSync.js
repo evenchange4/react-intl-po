@@ -23,7 +23,7 @@ function filterPOAndWriteTranslateSync(srcPatterns,
 
   const locales = Object.keys(translationTable);
   const result = toObjectBy(locales, locale => ({
-    [locale]: toObjectBy(messageList, (message) => ({
+    [locale]: toObjectBy(messageList, message => ({
       [message.id]: translationTable[locale][message[messageKey]],
     })),
   }));
@@ -35,7 +35,7 @@ function filterPOAndWriteTranslateSync(srcPatterns,
   } else {
     mkdirp.sync(output); // ensure the output folder exists
 
-    Object.keys(result).map(lang => {
+    Object.keys(result).map((lang) => {
       fs.writeFileSync(path.join(output, `${lang}.json`), JSON.stringify(result[lang], null, 0));
       console.log(chalk.green(
         `> [react-intl-po] write file -> ${path.join(output, `${lang}.json`)} ✔️`));

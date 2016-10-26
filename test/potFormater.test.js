@@ -1,11 +1,11 @@
 import test from 'ava';
 import potFormater from '../src/potFormater';
 
-test('should return a function', t => {
+test('should return a function', (t) => {
   t.is(typeof potFormater, 'function');
 });
 
-test('should return pot formatted string', t => {
+test('should return pot formatted string', (t) => {
   t.is(
     potFormater({
       'Go to MCS website': [

@@ -2,14 +2,11 @@ sudo: false
 language: node_js
 node_js:
   - "6"
-  - "4"
-  - "4.2.2"
 
 notifications:
   email: evenchange4@gmail.com
 
 before_install:
-  - npm i -g npm@2
   # remove useless/non listed deps
   - npm prune
   # faster npm install

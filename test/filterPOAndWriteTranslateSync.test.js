@@ -3,11 +3,11 @@ import test from 'ava';
 import filterPOAndWriteTranslateSync
   from '../src/filterPOAndWriteTranslateSync';
 
-test('should return a function', t => {
+test('should return a function', (t) => {
   t.is(typeof filterPOAndWriteTranslateSync, 'function');
 });
 
-test('should output one merged file if a *json file* is set', t => {
+test('should output one merged file if a *json file* is set', (t) => {
   const messagesPattern = './messages/**/*.json';
   const output = './temp/translations.json';
 
@@ -27,7 +27,7 @@ test('should output one merged file if a *json file* is set', t => {
   );
 });
 
-test('should output one file per locale if a *directory* is set', t => {
+test('should output one file per locale if a *directory* is set', (t) => {
   const messagesPattern = './messages/**/*.json';
   const output = './temp/translations';
 

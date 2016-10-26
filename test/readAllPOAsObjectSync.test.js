@@ -4,11 +4,11 @@ import {
   DEFAULT_MAPPER as defaultMapper,
 } from '../src/readAllPOAsObjectSync';
 
-test('should return a function', t => {
+test('should return a function', (t) => {
   t.is(typeof readAllPOAsObjectSync, 'function');
 });
 
-test('should return locale when DEFAULT_MAPPER w/o prefix', t => {
+test('should return locale when DEFAULT_MAPPER w/o prefix', (t) => {
   t.is(defaultMapper('mcs-public.zh-CN.po'), 'zh-CN');
   t.is(defaultMapper('mcs-public.zh-TW.po'), 'zh-TW');
   t.is(defaultMapper('mcs-public.en.po'), 'en');
@@ -26,7 +26,7 @@ test('should return locale when DEFAULT_MAPPER w/o prefix', t => {
   t.is(defaultMapper('en.po'), 'en');
 });
 
-test('should return po object with default localeMapper', t => {
+test('should return po object with default localeMapper', (t) => {
   t.deepEqual(
     readAllPOAsObjectSync('./po/mcs-public.*.po'),
     {
@@ -36,7 +36,7 @@ test('should return po object with default localeMapper', t => {
   );
 });
 
-test('should return po object with custom localeMapper', t => {
+test('should return po object with custom localeMapper', (t) => {
   t.deepEqual(
     readAllPOAsObjectSync(
       './po/*_project.po',

@@ -118,6 +118,7 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 ## Test
 
 ```
+$ npm run lint
 $ npm run test:watch
 ```
 

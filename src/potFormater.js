@@ -7,7 +7,7 @@
  *
  * @author Michael Hsu
  */
-const potCommentsFormater = (messageList) =>
+const potCommentsFormater = messageList =>
   messageList.reduce((acc, { filename, id, description }) =>
     `${acc}#: ${filename}\n#. [${id}] - ${description}\n`
   , '');
@@ -22,7 +22,7 @@ const potCommentsFormater = (messageList) =>
  * @author Michael Hsu
  */
 
-const potFormater = (messageObject) =>
+const potFormater = messageObject =>
   Object.keys(messageObject) // return array of id
     .sort()
     .map(id => `${potCommentsFormater(messageObject[id])}msgid "${id}"\nmsgstr ""\n`)
