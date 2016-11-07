@@ -1,6 +1,5 @@
 import test from 'ava';
-import {
-  default as readAllPOAsObjectSync,
+import readAllPOAsObjectSync, {
   DEFAULT_MAPPER as defaultMapper,
 } from '../src/readAllPOAsObjectSync';
 

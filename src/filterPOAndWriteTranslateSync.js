@@ -13,7 +13,7 @@ import readAllPOAsObjectSync from './readAllPOAsObjectSync';
 const isAJSONFile = string => /.json/.test(string);
 
 function filterPOAndWriteTranslateSync(srcPatterns,
-    { messageKey = 'defaultMessage', messagesPattern, output }) {
+  { messageKey = 'defaultMessage', messagesPattern, output }) {
   const translationTable = readAllPOAsObjectSync(srcPatterns);
   const messageList = flowRight(
     flatten,                    // 3. return flatten object values

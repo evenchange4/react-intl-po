@@ -45,7 +45,7 @@ test('should return messages object with default mapper', (t) => {
           filename: './messages/src/containers/NotFound/messages.json',
         },
       ],
-    }
+    },
   );
 });
 
@@ -53,7 +53,7 @@ test('should return messages object with description as key', (t) => {
   t.deepEqual(
     readAllMessageAsObjectSync(
       './messages/**/App.json',
-      (message, filename) => ({ [message.description]: [{ ...message, filename }]})
+      (message, filename) => ({ [message.description]: [{ ...message, filename }]}),
     ),
     {
       'The error message when api response as 404 not found': [
@@ -80,6 +80,6 @@ test('should return messages object with description as key', (t) => {
           filename: './messages/src/containers/App/App.json',
         },
       ],
-    }
+    },
   );
 });
