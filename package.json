@@ -50,7 +50,7 @@
     "babel-register": "^6.18.0",
     "codecov": "^1.0.1",
     "eslint": "^3.8.1",
-    "lint-config-m": "^2.0.1",
+    "lint-config-m": "^3.0.0",
     "nyc": "^8.3.2",
     "stylelint": "^7.5.0"
   },
