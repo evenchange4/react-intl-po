@@ -57,6 +57,6 @@ test('should return messages object with custom message key mapper', (t) => {
     '#: ./messages/src/containers/NotFound/messages.json\n' +
     '#. [NotFound.errorButton] - Click error Button\n' +
     'msgid "NotFound.errorButton"\n' +
-    'msgstr ""\n'
+    'msgstr ""\n',
   );
 });

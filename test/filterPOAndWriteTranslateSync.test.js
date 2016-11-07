@@ -37,7 +37,7 @@ test('should output one file per locale if a *directory* is set', (t) => {
     {
       'App.Creator': '建立者（簡中）',
       'NotFound.Creator': '建立者（簡中）',
-    }
+    },
   );
 
   t.deepEqual(
@@ -45,6 +45,6 @@ test('should output one file per locale if a *directory* is set', (t) => {
     {
       'App.Creator': '建立者',
       'NotFound.Creator': '建立者',
-    }
+    },
   );
 });
