@@ -14,15 +14,16 @@
  * @author Guillaume Boddaert
  */
 
-export const potHeader = (options = {}) => {
+const potHeader = (options = {}) => {
   let header = '';
 
   if (options.comments) {
+    let comments = options.comments;
     if (!Array.isArray(options.comments)) {
-      options.comments = [options.comments];
+      comments = [options.comments];
     }
-    const comments = options.comments.reduce((o, n) => o.concat(n.split('\n')), []);
-    header += comments.map(comment => `# ${comment}`).join('\n') + '\n';
+    comments = comments.reduce((o, n) => o.concat(n.split('\n')), []);
+    header += `${comments.map(comment => `# ${comment}`).join('\n')}\n`;
   }
   header += 'msgid ""\nmsgstr ""\n';
 
@@ -38,10 +39,10 @@ export const potHeader = (options = {}) => {
   if (options.encoding) {
     header += `"Content-Transfer-Encoding: ${options.encoding}\\n"\n`;
   }
-  header += `"MIME-Version: 1.0\\n"\n`;
-  header += `"X-Generator: react-intl-po\\n"\n`;
+  header += '"MIME-Version: 1.0\\n"\n';
+  header += '"X-Generator: react-intl-po\\n"\n';
   header += '\n\n';
   return header;
 };
 
-export default potHeader
+export default potHeader;

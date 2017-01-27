@@ -30,7 +30,7 @@ test('should return pot header, without empty options', (t) => {
 test('should return pot header, with a single comment', (t) => {
   t.is(
     potHeader({
-      comments: 'This is a single line comment'
+      comments: 'This is a single line comment',
     }),
     '# This is a single line comment\n' +
     'msgid ""\n' +
@@ -44,7 +44,7 @@ test('should return pot header, with a single comment', (t) => {
 test('should return pot header, with a single comment, with CR in it', (t) => {
   t.is(
     potHeader({
-      comments: 'This is a multi-line\ncomment\n'
+      comments: 'This is a multi-line\ncomment\n',
     }),
     '# This is a multi-line\n' +
     '# comment\n' +
@@ -60,7 +60,7 @@ test('should return pot header, with a single comment, with CR in it', (t) => {
 test('should return pot header, with a list of comments', (t) => {
   t.is(
     potHeader({
-      comments: ['A', 'B', 'C']
+      comments: ['A', 'B', 'C'],
     }),
     '# A\n' +
     '# B\n' +
@@ -79,9 +79,9 @@ test('should return pot header, with all options', (t) => {
     potHeader({
       comments: 'This is a single line comment',
       projectIdVersion: 'FUBAR',
-      potCreationDate: new Date(1995,11,17,3,24,0),
+      potCreationDate: new Date(1995, 11, 17, 3, 24, 0),
       charset: 'UTF-8',
-      encoding: '8bit'
+      encoding: '8bit',
     }),
     '# This is a single line comment\n' +
     'msgid ""\n' +

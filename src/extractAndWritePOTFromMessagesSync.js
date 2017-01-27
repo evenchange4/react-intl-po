@@ -20,7 +20,7 @@ function extractAndWritePOTFromMessagesSync(srcPatterns, { messageKey, output, h
     potCreationDate: new Date(),
     charset: 'UTF-8',
     encoding: '8bit',
-    ...headerOptions
+    ...headerOptions,
   });
 
   result += flowRight(

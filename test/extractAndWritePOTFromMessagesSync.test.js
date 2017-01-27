@@ -9,7 +9,7 @@ test('should return a function', (t) => {
 
 test('should return messages object with default mapper', (t) => {
   const output = './temp/extract.pot';
-  const headerOptions = { potCreationDate: new Date(2017, 1, 1, 11, 23, 12)};
+  const headerOptions = { potCreationDate: new Date(2017, 1, 1, 11, 23, 12) };
 
   extractAndWritePOTFromMessagesSync('./messages/**/*.json', { output, headerOptions });
 
@@ -45,7 +45,7 @@ test('should return messages object with default mapper', (t) => {
 
 test('should return messages object with custom message key mapper', (t) => {
   const output = './temp/extract2.pot';
-  const headerOptions = { potCreationDate: new Date(2017, 1, 1, 11, 23, 12)};
+  const headerOptions = { potCreationDate: new Date(2017, 1, 1, 11, 23, 12) };
 
   extractAndWritePOTFromMessagesSync('./messages/**/*.json', { messageKey: 'id', output, headerOptions });
   t.is(
