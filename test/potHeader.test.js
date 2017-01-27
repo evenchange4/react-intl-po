@@ -79,7 +79,7 @@ test('should return pot header, with all options', (t) => {
     potHeader({
       comments: 'This is a single line comment',
       projectIdVersion: 'FUBAR',
-      potCreationDate: new Date(1995, 11, 17, 3, 24, 0),
+      potCreationDate: new Date(Date.UTC(1995, 11, 17, 3, 24, 0)),
       charset: 'UTF-8',
       encoding: '8bit',
     }),
@@ -87,7 +87,7 @@ test('should return pot header, with all options', (t) => {
     'msgid ""\n' +
     'msgstr ""\n' +
     '"Project-Id-Version: FUBAR\\n"\n' +
-    '"POT-Creation-Date: 1995-12-17T02:24:00.000Z\\n"\n' +
+    '"POT-Creation-Date: 1995-12-17T03:24:00.000Z\\n"\n' +
     '"Content-Type: text/plain; charset=UTF-8\\n"\n' +
     '"Content-Transfer-Encoding: 8bit\\n"\n' +
     '"MIME-Version: 1.0\\n"\n' +

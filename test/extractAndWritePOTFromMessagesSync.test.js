@@ -9,7 +9,7 @@ test('should return a function', (t) => {
 
 test('should return messages object with default mapper', (t) => {
   const output = './temp/extract.pot';
-  const headerOptions = { potCreationDate: new Date(2017, 1, 1, 11, 23, 12) };
+  const headerOptions = { potCreationDate: new Date(Date.UTC(2017, 1, 1, 11, 23, 12)) };
 
   extractAndWritePOTFromMessagesSync('./messages/**/*.json', { output, headerOptions });
 
@@ -17,7 +17,7 @@ test('should return messages object with default mapper', (t) => {
     fs.readFileSync(output, 'utf8'),
     'msgid ""\n' +
     'msgstr ""\n' +
-    '"POT-Creation-Date: 2017-02-01T10:23:12.000Z\\n"\n' +
+    '"POT-Creation-Date: 2017-02-01T11:23:12.000Z\\n"\n' +
     '"Content-Type: text/plain; charset=UTF-8\\n"\n' +
     '"Content-Transfer-Encoding: 8bit\\n"\n' +
     '"MIME-Version: 1.0\\n"\n' +
@@ -45,14 +45,14 @@ test('should return messages object with default mapper', (t) => {
 
 test('should return messages object with custom message key mapper', (t) => {
   const output = './temp/extract2.pot';
-  const headerOptions = { potCreationDate: new Date(2017, 1, 1, 11, 23, 12) };
+  const headerOptions = { potCreationDate: new Date(Date.UTC(2017, 1, 1, 11, 23, 12)) };
 
   extractAndWritePOTFromMessagesSync('./messages/**/*.json', { messageKey: 'id', output, headerOptions });
   t.is(
     fs.readFileSync(output, 'utf8'),
     'msgid ""\n' +
     'msgstr ""\n' +
-    '"POT-Creation-Date: 2017-02-01T10:23:12.000Z\\n"\n' +
+    '"POT-Creation-Date: 2017-02-01T11:23:12.000Z\\n"\n' +
     '"Content-Type: text/plain; charset=UTF-8\\n"\n' +
     '"Content-Transfer-Encoding: 8bit\\n"\n' +
     '"MIME-Version: 1.0\\n"\n' +
