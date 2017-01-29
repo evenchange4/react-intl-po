@@ -15,6 +15,7 @@ test('should return messages object with default mapper', (t) => {
           description: 'The error message when api response as 404 not found',
           defaultMessage: 'The device is now private or deleted.',
           filename: './messages/src/containers/App/App.json',
+          mappedBy: 'defaultMessage',
         },
       ],
       'Go to MCS website': [
@@ -23,12 +24,14 @@ test('should return messages object with default mapper', (t) => {
           description: 'Click error Button',
           defaultMessage: 'Go to MCS website',
           filename: './messages/src/containers/App/App.json',
+          mappedBy: 'defaultMessage',
         },
         {
           id: 'NotFound.errorButton',
           description: 'Click error Button',
           defaultMessage: 'Go to MCS website',
           filename: './messages/src/containers/NotFound/messages.json',
+          mappedBy: 'defaultMessage',
         },
       ],
       Creator: [
@@ -37,12 +40,14 @@ test('should return messages object with default mapper', (t) => {
           description: 'Creator',
           defaultMessage: 'Creator',
           filename: './messages/src/containers/App/App.json',
+          mappedBy: 'defaultMessage',
         },
         {
           id: 'NotFound.Creator',
           description: 'Creator',
           defaultMessage: 'Creator',
           filename: './messages/src/containers/NotFound/messages.json',
+          mappedBy: 'defaultMessage',
         },
       ],
     },
@@ -53,7 +58,7 @@ test('should return messages object with description as key', (t) => {
   t.deepEqual(
     readAllMessageAsObjectSync(
       './messages/**/App.json',
-      (message, filename) => ({ [message.description]: [{ ...message, filename }]}),
+      (message, filename) => ({ [message.description]: [{ ...message, filename, mappedBy: 'description' }]}),
     ),
     {
       'The error message when api response as 404 not found': [
@@ -62,6 +67,7 @@ test('should return messages object with description as key', (t) => {
           description: 'The error message when api response as 404 not found',
           defaultMessage: 'The device is now private or deleted.',
           filename: './messages/src/containers/App/App.json',
+          mappedBy: 'description',
         },
       ],
       'Click error Button': [
@@ -70,6 +76,7 @@ test('should return messages object with description as key', (t) => {
           description: 'Click error Button',
           defaultMessage: 'Go to MCS website',
           filename: './messages/src/containers/App/App.json',
+          mappedBy: 'description',
         },
       ],
       Creator: [
@@ -78,6 +85,7 @@ test('should return messages object with description as key', (t) => {
           description: 'Creator',
           defaultMessage: 'Creator',
           filename: './messages/src/containers/App/App.json',
+          mappedBy: 'description',
         },
       ],
     },

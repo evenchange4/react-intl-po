@@ -7,7 +7,7 @@ import potFormater from './potFormater';
 import potHeader from './potHeader';
 
 const customKeyMapper = (message, messageKey, filename) => ({
-  [message[messageKey]]: [{ ...message, filename }],
+  [message[messageKey]]: [{ ...message, filename, mappedBy: messageKey }],
 });
 
 const customKeyMapperFactory = (messageKey = 'defaultMessage') =>

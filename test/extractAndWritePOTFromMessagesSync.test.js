@@ -61,22 +61,32 @@ test('should return messages object with custom message key mapper', (t) => {
     '\n' +
     '#: ./messages/src/containers/App/App.json\n' +
     '#. [App.Creator] - Creator\n' +
+    '#. defaultMessage is:\n' +
+    '#. Creator\n' +
     'msgid "App.Creator"\n' +
     'msgstr ""\n\n' +
     '#: ./messages/src/containers/App/App.json\n' +
     '#. [App.errorButton] - Click error Button\n' +
+    '#. defaultMessage is:\n' +
+    '#. Go to MCS website\n' +
     'msgid "App.errorButton"\n' +
     'msgstr ""\n\n' +
     '#: ./messages/src/containers/App/App.json\n' +
     '#. [App.errorMessage] - The error message when api response as 404 not found\n' +
+    '#. defaultMessage is:\n' +
+    '#. The device is now private or deleted.\n' +
     'msgid "App.errorMessage"\n' +
     'msgstr ""\n\n' +
     '#: ./messages/src/containers/NotFound/messages.json\n' +
     '#. [NotFound.Creator] - Creator\n' +
+    '#. defaultMessage is:\n' +
+    '#. Creator\n' +
     'msgid "NotFound.Creator"\n' +
     'msgstr ""\n\n' +
     '#: ./messages/src/containers/NotFound/messages.json\n' +
     '#. [NotFound.errorButton] - Click error Button\n' +
+    '#. defaultMessage is:\n' +
+    '#. Go to MCS website\n' +
     'msgid "NotFound.errorButton"\n' +
     'msgstr ""\n',
   );
