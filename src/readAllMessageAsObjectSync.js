@@ -2,35 +2,41 @@ import fs from 'fs';
 import { sync as globSync } from 'glob';
 import mergeWith from 'lodash/mergeWith';
 import isArray from 'lodash/isArray';
-import toObjectBy from 'to-object-by';
+
+const customizer = (accValue, objectValue) => {
+  if (!isArray(accValue)) return objectValue;
+
+  return accValue.concat(objectValue);
+};
 
 // hint: Use defaultMessage as key by default
-const DEFAULT_MAPPER = (message, filename) => ({
-  [message.defaultMessage]: [{ ...message, filename }],
-});
+const indexBy = messageKey => ({ messages, filename }) =>
+  messages.reduce((acc, message) => ({
+    ...acc,
+    [message[messageKey]]: acc[message[messageKey]]
+      ? acc[message[messageKey]].concat([{ ...message, filename }])
+      : [{ ...message, filename }],
+  }), {});
 
 /**
  * Read extracted .json file synchronized and
  * aggregates origin messages objects
  *
  * @param {String} srcPatterns - path to translated .json file
+ * @param {String} messageKey - [defaultMessage]
  * @return {Object} messages - return aggregates object
  *
  * @author Michael Hsu
  */
 
-function readAllMessageAsObjectSync(srcPatterns, messageMapper = DEFAULT_MAPPER) {
+function readAllMessageAsObjectSync(srcPatterns, messageKey = 'defaultMessage') {
   return globSync(srcPatterns)
     // 1. read messages
     .map(filename => ({ filename, messages: JSON.parse(fs.readFileSync(filename, 'utf8')) }))
-    // 2. convert message list to object by defaultMessage
-    .map(({ filename, messages }) => toObjectBy(messages, e => messageMapper(e, filename)))
+    // 2. convert message list to object by messageKey
+    .map(indexBy(messageKey))
     // 3. aggregate objects (merge and concat)
-    .reduce((acc, object) => mergeWith(acc, object, (accValue, objectValue) => {
-      if (!isArray(accValue)) return objectValue;
-
-      return accValue.concat(objectValue);
-    }), {});
+    .reduce((acc, object) => mergeWith(acc, object, customizer), {});
 }
 
 export default readAllMessageAsObjectSync;

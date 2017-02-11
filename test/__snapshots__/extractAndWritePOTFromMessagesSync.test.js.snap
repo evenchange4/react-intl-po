@@ -9,8 +9,13 @@ msgstr \"\"
 
 
 #: ./test/messages/src/containers/App/App.json
-#. [App.Creator] - Creator
-msgid \"App.Creator\"
+#. [App.Creator 1] - Creator 1
+msgid \"App.Creator 1\"
+msgstr \"\"
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator 2] - Creator 2
+msgid \"App.Creator 2\"
 msgstr \"\"
 
 #: ./test/messages/src/containers/App/App.json
@@ -46,7 +51,9 @@ msgstr \"\"
 
 
 #: ./test/messages/src/containers/App/App.json
-#. [App.Creator] - Creator
+#. [App.Creator 1] - Creator 1
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator 2] - Creator 2
 #: ./test/messages/src/containers/NotFound/messages.json
 #. [NotFound.Creator] - Creator
 msgid \"Creator\"

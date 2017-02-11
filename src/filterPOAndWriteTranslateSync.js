@@ -19,7 +19,7 @@ function filterPOAndWriteTranslateSync(srcPatterns,
     flatten,                    // 3. return flatten object values
     values,                     // 2. return object values
     readAllMessageAsObjectSync, // 1. return message object
-  )(messagesPattern);
+  )(messagesPattern, messageKey);
 
   const locales = Object.keys(translationTable);
   const result = toObjectBy(locales, locale => ({

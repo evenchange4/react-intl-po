@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2017-02-01T11:23:12.000Z\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"X-Generator: react-intl-po\n"
+
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator 1] - Creator 1
+msgid "App.Creator 1"
+msgstr "建立者（繁中1）"
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator 2] - Creator 2
+msgid "App.Creator 2"
+msgstr "建立者（繁中2）"
