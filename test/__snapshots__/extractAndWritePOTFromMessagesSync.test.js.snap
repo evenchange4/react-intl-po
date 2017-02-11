@@ -10,31 +10,43 @@ msgstr \"\"
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.Creator 1] - Creator 1
+#. defaultMessage is:
+#. Creator
 msgid \"App.Creator 1\"
 msgstr \"\"
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.Creator 2] - Creator 2
+#. defaultMessage is:
+#. Creator
 msgid \"App.Creator 2\"
 msgstr \"\"
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
 msgid \"App.errorButton\"
 msgstr \"\"
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.errorMessage] - The error message when api response as 404 not found
+#. defaultMessage is:
+#. The device is now private or deleted.
 msgid \"App.errorMessage\"
 msgstr \"\"
 
 #: ./test/messages/src/containers/NotFound/messages.json
 #. [NotFound.Creator] - Creator
+#. defaultMessage is:
+#. Creator
 msgid \"NotFound.Creator\"
 msgstr \"\"
 
 #: ./test/messages/src/containers/NotFound/messages.json
 #. [NotFound.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
 msgid \"NotFound.errorButton\"
 msgstr \"\"
 "
@@ -52,22 +64,34 @@ msgstr \"\"
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.Creator 1] - Creator 1
+#. defaultMessage is:
+#. Creator
 #: ./test/messages/src/containers/App/App.json
 #. [App.Creator 2] - Creator 2
+#. defaultMessage is:
+#. Creator
 #: ./test/messages/src/containers/NotFound/messages.json
 #. [NotFound.Creator] - Creator
+#. defaultMessage is:
+#. Creator
 msgid \"Creator\"
 msgstr \"\"
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
 #: ./test/messages/src/containers/NotFound/messages.json
 #. [NotFound.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
 msgid \"Go to MCS website\"
 msgstr \"\"
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.errorMessage] - The error message when api response as 404 not found
+#. defaultMessage is:
+#. The device is now private or deleted.
 msgid \"The device is now private or deleted.\"
 msgstr \"\"
 "
