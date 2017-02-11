@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+## [v2.0.0]
+> Feb 11, 2017
+
 * feat(jest): replace ava with jest snapshot testing (#63)
 * fix(messageKey): allowing duplicated key in the same file. (#59)
   
