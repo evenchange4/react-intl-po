@@ -2,6 +2,7 @@ sudo: false
 language: node_js
 node_js:
   - "6"
+  - "7"
 
 notifications:
   email: evenchange4@gmail.com
@@ -16,4 +17,4 @@ script:
   - npm run lint
   - npm run test:coverage
 
-after_success: npm run coverage
+after_success: npm run codecov

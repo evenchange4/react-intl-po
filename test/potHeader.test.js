@@ -1,81 +1,48 @@
-import test from 'ava';
 import potHeader from '../src/potHeader';
 
-test('should return a function', (t) => {
-  t.is(typeof potHeader, 'function');
+it('should return a function', () => {
+  expect(typeof potHeader).toBe('function');
 });
 
-test('should return pot header, without any parameter', (t) => {
-  t.is(
+it('should return pot header, without any parameter', () => {
+  expect(
     potHeader(),
-    'msgid ""\n' +
-    'msgstr ""\n' +
-    '"MIME-Version: 1.0\\n"\n' +
-    '"X-Generator: react-intl-po\\n"\n' +
-    '\n\n',
-  );
+  ).toMatchSnapshot();
 });
 
-test('should return pot header, without empty options', (t) => {
-  t.is(
+it('should return pot header, without empty options', () => {
+  expect(
     potHeader({}),
-    'msgid ""\n' +
-    'msgstr ""\n' +
-    '"MIME-Version: 1.0\\n"\n' +
-    '"X-Generator: react-intl-po\\n"\n' +
-    '\n\n',
-  );
+  ).toMatchSnapshot();
 });
 
-test('should return pot header, with a single comment', (t) => {
-  t.is(
+it('should return pot header, with a single comment', () => {
+  expect(
     potHeader({
       comments: 'This is a single line comment',
     }),
-    '# This is a single line comment\n' +
-    'msgid ""\n' +
-    'msgstr ""\n' +
-    '"MIME-Version: 1.0\\n"\n' +
-    '"X-Generator: react-intl-po\\n"\n' +
-    '\n\n',
-  );
+  ).toMatchSnapshot();
 });
 
-test('should return pot header, with a single comment, with CR in it', (t) => {
-  t.is(
+it('should return pot header, with a single comment, with CR in it', () => {
+  expect(
     potHeader({
       comments: 'This is a multi-line\ncomment\n',
     }),
-    '# This is a multi-line\n' +
-    '# comment\n' +
-    '# \n' +
-    'msgid ""\n' +
-    'msgstr ""\n' +
-    '"MIME-Version: 1.0\\n"\n' +
-    '"X-Generator: react-intl-po\\n"\n' +
-    '\n\n',
-  );
+  ).toMatchSnapshot();
 });
 
-test('should return pot header, with a list of comments', (t) => {
-  t.is(
+it('should return pot header, with a list of comments', () => {
+  expect(
     potHeader({
       comments: ['A', 'B', 'C'],
     }),
-    '# A\n' +
-    '# B\n' +
-    '# C\n' +
-    'msgid ""\n' +
-    'msgstr ""\n' +
-    '"MIME-Version: 1.0\\n"\n' +
-    '"X-Generator: react-intl-po\\n"\n' +
-    '\n\n',
-  );
+  ).toMatchSnapshot();
 });
 
 
-test('should return pot header, with all options', (t) => {
-  t.is(
+it('should return pot header, with all options', () => {
+  expect(
     potHeader({
       comments: 'This is a single line comment',
       projectIdVersion: 'FUBAR',
@@ -83,15 +50,5 @@ test('should return pot header, with all options', (t) => {
       charset: 'UTF-8',
       encoding: '8bit',
     }),
-    '# This is a single line comment\n' +
-    'msgid ""\n' +
-    'msgstr ""\n' +
-    '"Project-Id-Version: FUBAR\\n"\n' +
-    '"POT-Creation-Date: 1995-12-17T03:24:00.000Z\\n"\n' +
-    '"Content-Type: text/plain; charset=UTF-8\\n"\n' +
-    '"Content-Transfer-Encoding: 8bit\\n"\n' +
-    '"MIME-Version: 1.0\\n"\n' +
-    '"X-Generator: react-intl-po\\n"\n' +
-    '\n\n',
-  );
+  ).toMatchSnapshot();
 });

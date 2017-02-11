@@ -1,0 +1,9 @@
+exports[`test should return pot formatted string 1`] = `
+"#: ./messages/src/containers/App/App.json
+#. [App.errorButton] - Click error Button
+#: ./messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton] - Click error Button
+msgid \"Go to MCS website\"
+msgstr \"\"
+"
+`;

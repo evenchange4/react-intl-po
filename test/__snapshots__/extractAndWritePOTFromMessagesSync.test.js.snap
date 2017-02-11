@@ -1,0 +1,67 @@
+exports[`test should return messages object with custom message key mapper 1`] = `
+"msgid \"\"
+msgstr \"\"
+\"POT-Creation-Date: 2017-02-01T11:23:12.000Z\\n\"
+\"Content-Type: text/plain; charset=UTF-8\\n\"
+\"Content-Transfer-Encoding: 8bit\\n\"
+\"MIME-Version: 1.0\\n\"
+\"X-Generator: react-intl-po\\n\"
+
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator] - Creator
+msgid \"App.Creator\"
+msgstr \"\"
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.errorButton] - Click error Button
+msgid \"App.errorButton\"
+msgstr \"\"
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.errorMessage] - The error message when api response as 404 not found
+msgid \"App.errorMessage\"
+msgstr \"\"
+
+#: ./test/messages/src/containers/NotFound/messages.json
+#. [NotFound.Creator] - Creator
+msgid \"NotFound.Creator\"
+msgstr \"\"
+
+#: ./test/messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton] - Click error Button
+msgid \"NotFound.errorButton\"
+msgstr \"\"
+"
+`;
+
+exports[`test should return messages object with default mapper 1`] = `
+"msgid \"\"
+msgstr \"\"
+\"POT-Creation-Date: 2017-02-01T11:23:12.000Z\\n\"
+\"Content-Type: text/plain; charset=UTF-8\\n\"
+\"Content-Transfer-Encoding: 8bit\\n\"
+\"MIME-Version: 1.0\\n\"
+\"X-Generator: react-intl-po\\n\"
+
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator] - Creator
+#: ./test/messages/src/containers/NotFound/messages.json
+#. [NotFound.Creator] - Creator
+msgid \"Creator\"
+msgstr \"\"
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.errorButton] - Click error Button
+#: ./test/messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton] - Click error Button
+msgid \"Go to MCS website\"
+msgstr \"\"
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.errorMessage] - The error message when api response as 404 not found
+msgid \"The device is now private or deleted.\"
+msgstr \"\"
+"
+`;

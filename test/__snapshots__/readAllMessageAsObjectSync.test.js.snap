@@ -1,0 +1,69 @@
+exports[`test should return messages object with default mapper 1`] = `
+Object {
+  "Creator": Array [
+    Object {
+      "defaultMessage": "Creator",
+      "description": "Creator",
+      "filename": "./test/messages/src/containers/App/App.json",
+      "id": "App.Creator",
+    },
+    Object {
+      "defaultMessage": "Creator",
+      "description": "Creator",
+      "filename": "./test/messages/src/containers/NotFound/messages.json",
+      "id": "NotFound.Creator",
+    },
+  ],
+  "Go to MCS website": Array [
+    Object {
+      "defaultMessage": "Go to MCS website",
+      "description": "Click error Button",
+      "filename": "./test/messages/src/containers/App/App.json",
+      "id": "App.errorButton",
+    },
+    Object {
+      "defaultMessage": "Go to MCS website",
+      "description": "Click error Button",
+      "filename": "./test/messages/src/containers/NotFound/messages.json",
+      "id": "NotFound.errorButton",
+    },
+  ],
+  "The device is now private or deleted.": Array [
+    Object {
+      "defaultMessage": "The device is now private or deleted.",
+      "description": "The error message when api response as 404 not found",
+      "filename": "./test/messages/src/containers/App/App.json",
+      "id": "App.errorMessage",
+    },
+  ],
+}
+`;
+
+exports[`test should return messages object with description as key 1`] = `
+Object {
+  "Click error Button": Array [
+    Object {
+      "defaultMessage": "Go to MCS website",
+      "description": "Click error Button",
+      "filename": "./test/messages/src/containers/App/App.json",
+      "id": "App.errorButton",
+    },
+  ],
+  "Creator": Array [
+    Object {
+      "defaultMessage": "Creator",
+      "description": "Creator",
+      "filename": "./test/messages/src/containers/App/App.json",
+      "id": "App.Creator",
+    },
+  ],
+  "The error message when api response as 404 not found": Array [
+    Object {
+      "defaultMessage": "The device is now private or deleted.",
+      "description": "The error message when api response as 404 not found",
+      "filename": "./test/messages/src/containers/App/App.json",
+      "id": "App.errorMessage",
+    },
+  ],
+}
+`;

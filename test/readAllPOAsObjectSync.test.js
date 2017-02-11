@@ -1,49 +1,40 @@
-import test from 'ava';
 import readAllPOAsObjectSync, {
   DEFAULT_MAPPER as defaultMapper,
 } from '../src/readAllPOAsObjectSync';
 
-test('should return a function', (t) => {
-  t.is(typeof readAllPOAsObjectSync, 'function');
+it('should return a function', () => {
+  expect(typeof readAllPOAsObjectSync).toBe('function');
 });
 
-test('should return locale when DEFAULT_MAPPER w/o prefix', (t) => {
-  t.is(defaultMapper('mcs-public.zh-CN.po'), 'zh-CN');
-  t.is(defaultMapper('mcs-public.zh-TW.po'), 'zh-TW');
-  t.is(defaultMapper('mcs-public.en.po'), 'en');
+it('should return locale when DEFAULT_MAPPER w/o prefix', () => {
+  expect(defaultMapper('mcs-public.zh-CN.po')).toBe('zh-CN');
+  expect(defaultMapper('mcs-public.zh-TW.po')).toBe('zh-TW');
+  expect(defaultMapper('mcs-public.en.po')).toBe('en');
 
-  t.is(defaultMapper('./node_modules/mcs-translation/po/mcs-public.zh-cn.po'), 'zh-cn');
-  t.is(defaultMapper('./node_modules/mcs-translation/po/mcs-public.zh-tw.po'), 'zh-tw');
-  t.is(defaultMapper('./node_modules/mcs-translation/po/mcs-public.en.po'), 'en');
+  expect(defaultMapper('./node_modules/mcs-translation/po/mcs-public.zh-cn.po')).toBe('zh-cn');
+  expect(defaultMapper('./node_modules/mcs-translation/po/mcs-public.zh-tw.po')).toBe('zh-tw');
+  expect(defaultMapper('./node_modules/mcs-translation/po/mcs-public.en.po')).toBe('en');
 
-  t.is(defaultMapper('./node_modules/mcs-translation/po/zh-CN.po'), 'zh-CN');
-  t.is(defaultMapper('./node_modules/mcs-translation/po/zh-TW.po'), 'zh-TW');
-  t.is(defaultMapper('./node_modules/mcs-translation/po/en.po'), 'en');
+  expect(defaultMapper('./node_modules/mcs-translation/po/zh-CN.po')).toBe('zh-CN');
+  expect(defaultMapper('./node_modules/mcs-translation/po/zh-TW.po')).toBe('zh-TW');
+  expect(defaultMapper('./node_modules/mcs-translation/po/en.po')).toBe('en');
 
-  t.is(defaultMapper('zh-CN.po'), 'zh-CN');
-  t.is(defaultMapper('zh-TW.po'), 'zh-TW');
-  t.is(defaultMapper('en.po'), 'en');
+  expect(defaultMapper('zh-CN.po')).toBe('zh-CN');
+  expect(defaultMapper('zh-TW.po')).toBe('zh-TW');
+  expect(defaultMapper('en.po')).toBe('en');
 });
 
-test('should return po object with default localeMapper', (t) => {
-  t.deepEqual(
-    readAllPOAsObjectSync('./po/mcs-public.*.po'),
-    {
-      'zh-CN': { '': undefined, Creator: '建立者（簡中）', Version: '版本（簡中）' },
-      'zh-TW': { '': undefined, Creator: '建立者', Version: '版本' },
-    },
-  );
+it('should return po object with default localeMapper', () => {
+  expect(
+    readAllPOAsObjectSync('./test/po/mcs-public.*.po'),
+  ).toMatchSnapshot();
 });
 
-test('should return po object with custom localeMapper', (t) => {
-  t.deepEqual(
+it('should return po object with custom localeMapper', () => {
+  expect(
     readAllPOAsObjectSync(
-      './po/*_project.po',
-      filename => filename.split(/(\/|_)/g)[4],
+      './test/po/*_project.po',
+      filename => filename.split(/(\/|_)/g)[6],
     ),
-    {
-      'zh-CN': { '': undefined, '( default )': '（默认值）' },
-      'zh-TW': { '': undefined, '( default )': '（默認值）' },
-    },
-  );
+  ).toMatchSnapshot();
 });
