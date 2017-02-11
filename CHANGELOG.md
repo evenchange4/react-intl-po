@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* feat(potFormater): Add defaultMessage to metadata of pot files.  ([@Guibod](https://github.com/Guibod) in [#60])
+
 ## [v2.0.0]
 > Feb 11, 2017
 
