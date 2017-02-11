@@ -3,6 +3,11 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.2.0]
+> Feb 11, 2017
+
+* feat(pot): Added support for POT header. ([@Guibod](https://github.com/Guibod) in [#56])
+
 ## [v1.1.0]
 > Oct 26, 2016
 
