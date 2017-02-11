@@ -1,6 +1,10 @@
 exports[`test should return po object with custom localeMapper 1`] = `
 Object {
-  "po": Object {
+  "zh-CN": Object {
+    "": undefined,
+    "( default )": "（默认值）",
+  },
+  "zh-TW": Object {
     "": undefined,
     "( default )": "（默認值）",
   },

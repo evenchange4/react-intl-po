@@ -34,7 +34,7 @@ it('should return po object with custom localeMapper', () => {
   expect(
     readAllPOAsObjectSync(
       './test/po/*_project.po',
-      filename => filename.split(/(\/|_)/g)[4],
+      filename => filename.split(/(\/|_)/g)[6],
     ),
   ).toMatchSnapshot();
 });
