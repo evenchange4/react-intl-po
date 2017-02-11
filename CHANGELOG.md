@@ -3,6 +3,14 @@
 ## [HEAD]
 > Unreleased
 
+* feat(jest): replace ava with jest snapshot testing (#63)
+* fix(messageKey): allowing duplicated key in the same file. (#59)
+  
+  [BREAKING CHANGES]
+  
+  - readAllMessageAsObjectSync: Passing `messageKey: String` as second parameter.
+  
+
 ## [v1.2.0]
 > Feb 11, 2017
 

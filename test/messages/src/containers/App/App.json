@@ -10,8 +10,13 @@
     "defaultMessage": "Go to MCS website"
   },
   {
-    "id": "App.Creator",
-    "description": "Creator",
+    "id": "App.Creator 1",
+    "description": "Creator 1",
+    "defaultMessage": "Creator"
+  },
+  {
+    "id": "App.Creator 2",
+    "description": "Creator 2",
     "defaultMessage": "Creator"
   }
 ]
