@@ -6,7 +6,7 @@ import toObjectBy from 'to-object-by';
 
 // hint: Use defaultMessage as key by default
 const DEFAULT_MAPPER = (message, filename) => ({
-  [message.defaultMessage]: [{ ...message, filename }],
+  [message.defaultMessage]: [{ ...message, filename, mappedBy: 'defaultMessage' }],
 });
 
 /**
