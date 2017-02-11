@@ -1,12 +1,11 @@
-import test from 'ava';
 import potFormater from '../src/potFormater';
 
-test('should return a function', (t) => {
-  t.is(typeof potFormater, 'function');
+it('should return a function', () => {
+  expect(typeof potFormater).toBe('function');
 });
 
-test('should return pot formatted string', (t) => {
-  t.is(
+it('should return pot formatted string', () => {
+  expect(
     potFormater({
       'Go to MCS website': [
         {
@@ -23,11 +22,5 @@ test('should return pot formatted string', (t) => {
         },
       ],
     }),
-    '#: ./messages/src/containers/App/App.json\n' +
-    '#. [App.errorButton] - Click error Button\n' +
-    '#: ./messages/src/containers/NotFound/messages.json\n' +
-    '#. [NotFound.errorButton] - Click error Button\n' +
-    'msgid "Go to MCS website"\n' +
-    'msgstr ""\n',
-  );
+  ).toMatchSnapshot();
 });
