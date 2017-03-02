@@ -1,4 +1,6 @@
-exports[`test should return po object with custom localeMapper 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return po object with custom localeMapper 1`] = `
 Object {
   "zh-CN": Object {
     "": undefined,
@@ -11,7 +13,7 @@ Object {
 }
 `;
 
-exports[`test should return po object with default localeMapper 1`] = `
+exports[`should return po object with default localeMapper 1`] = `
 Object {
   "zh-CN": Object {
     "": undefined,

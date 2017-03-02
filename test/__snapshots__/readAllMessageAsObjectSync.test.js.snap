@@ -1,4 +1,6 @@
-exports[`test should return messages object with default messageKey 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return messages object with default messageKey 1`] = `
 Object {
   "Creator": Array [
     Object {
@@ -45,7 +47,7 @@ Object {
 }
 `;
 
-exports[`test should return messages object with description as key 1`] = `
+exports[`should return messages object with description as key 1`] = `
 Object {
   "Click error Button": Array [
     Object {
@@ -82,7 +84,7 @@ Object {
 }
 `;
 
-exports[`test should return messages object with id as key 1`] = `
+exports[`should return messages object with id as key 1`] = `
 Object {
   "App.Creator 1": Array [
     Object {
