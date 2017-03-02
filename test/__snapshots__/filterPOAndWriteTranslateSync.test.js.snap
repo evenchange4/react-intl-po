@@ -1,4 +1,6 @@
-exports[`test should optput currect filter merged file with id as messageKey 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should optput currect filter merged file with id as messageKey 1`] = `
 Object {
   "zh-CN": Object {
     "App.Creator 1": "建立者（簡中1）",
@@ -11,7 +13,7 @@ Object {
 }
 `;
 
-exports[`test should output one file per locale if a *directory* is set 1`] = `
+exports[`should output one file per locale if a *directory* is set 1`] = `
 Object {
   "App.Creator 1": "建立者（簡中）",
   "App.Creator 2": "建立者（簡中）",
@@ -19,7 +21,7 @@ Object {
 }
 `;
 
-exports[`test should output one file per locale if a *directory* is set 2`] = `
+exports[`should output one file per locale if a *directory* is set 2`] = `
 Object {
   "App.Creator 1": "建立者",
   "App.Creator 2": "建立者",
@@ -27,7 +29,7 @@ Object {
 }
 `;
 
-exports[`test should output one merged file if a *json file* is set 1`] = `
+exports[`should output one merged file if a *json file* is set 1`] = `
 Object {
   "zh-CN": Object {
     "App.Creator 1": "建立者（簡中）",
