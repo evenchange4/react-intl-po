@@ -3,6 +3,12 @@
 ## [HEAD]
 > Unreleased
 
+## [v2.0.2]
+> Mar 02, 2017
+
+* fix(potFormater): Escape quotes in msgId ([@jonbretman](https://github.com/jonbretman) in [#70])
+* chore(Jest): update jest to 19.
+
 ## [v2.0.1]
 > Feb 12, 2017
 
