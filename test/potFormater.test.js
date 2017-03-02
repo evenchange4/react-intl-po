@@ -53,18 +53,3 @@ it('should return pot formatted string, with multi line values', () => {
     }),
   ).toMatchSnapshot();
 });
-
-it('should return pot formatted string, with double quotes escaped', () => {
-  expect(
-    potFormater({
-      'This is "quoted"': [
-        {
-          id: 'NotFound.errorButton',
-          description: 'My description\nis\nquite\nlong.',
-          defaultMessage: 'This is "quoted"',
-          filename: './messages/src/containers/NotFound/messages.json',
-        },
-      ],
-    }),
-  ).toMatchSnapshot();
-});

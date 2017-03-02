@@ -12,19 +12,6 @@ msgstr \"\"
 "
 `;
 
-exports[`test should return pot formatted string, with double quotes escaped 1`] = `
-"#: ./messages/src/containers/NotFound/messages.json
-#. [NotFound.errorButton] - My description
-#. is
-#. quite
-#. long.
-#. defaultMessage is:
-#. This is \"quoted\"
-msgid \"This is \\\"quoted\\\"\"
-msgstr \"\"
-"
-`;
-
 exports[`test should return pot formatted string, with multi line values 1`] = `
 "#: ./messages/src/containers/NotFound/messages.json
 #. [NotFound.errorButton] - My description
