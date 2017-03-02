@@ -58,7 +58,7 @@ const potCommentsFormater = messageList =>
 const potFormater = messageObject =>
   Object.keys(messageObject) // return array of id
     .sort()
-    .map(id => `${potCommentsFormater(messageObject[id])}msgid ${JSON.stringify(id)}\nmsgstr ""\n`)
+    .map(id => `${potCommentsFormater(messageObject[id])}msgid "${id}"\nmsgstr ""\n`)
     .join('\n');
 
 export default potFormater;
