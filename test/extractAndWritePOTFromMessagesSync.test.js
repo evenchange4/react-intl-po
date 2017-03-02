@@ -10,6 +10,7 @@ it('should return messages object with default mapper', () => {
   const headerOptions = { potCreationDate: new Date(Date.UTC(2017, 1, 1, 11, 23, 12)) };
 
   extractAndWritePOTFromMessagesSync('./test/messages/**/*.json', { output, headerOptions });
+  console.log(typeof fs.readFileSync(output, 'utf8'))
   expect(fs.readFileSync(output, 'utf8')).toMatchSnapshot();
 });
 

@@ -64,9 +64,13 @@
     ]
   },
   "jest": {
+    "testEnvironment": "node",
     "testRegex": "(/test/.*|\\.(test))\\.js$",
     "moduleFileExtensions": [
       "js"
+    ],
+    "snapshotSerializers": [
+      "./config/stringSerializer.js"
     ]
   },
   "eslintConfig": {

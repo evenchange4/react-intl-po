@@ -1,73 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should return pot header, with a list of comments 1`] = `
-"# A
+# A
 # B
 # C
-msgid \\"\\"
-msgstr \\"\\"
-\\"MIME-Version: 1.0\\\\n\\"
-\\"X-Generator: react-intl-po\\\\n\\"
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\\n"
+"X-Generator: react-intl-po\\n"
 
 
-"
+
 `;
 
 exports[`should return pot header, with a single comment 1`] = `
-"# This is a single line comment
-msgid \\"\\"
-msgstr \\"\\"
-\\"MIME-Version: 1.0\\\\n\\"
-\\"X-Generator: react-intl-po\\\\n\\"
+# This is a single line comment
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\\n"
+"X-Generator: react-intl-po\\n"
 
 
-"
+
 `;
 
 exports[`should return pot header, with a single comment, with CR in it 1`] = `
-"# This is a multi-line
+# This is a multi-line
 # comment
 # 
-msgid \\"\\"
-msgstr \\"\\"
-\\"MIME-Version: 1.0\\\\n\\"
-\\"X-Generator: react-intl-po\\\\n\\"
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\\n"
+"X-Generator: react-intl-po\\n"
 
 
-"
+
 `;
 
 exports[`should return pot header, with all options 1`] = `
-"# This is a single line comment
-msgid \\"\\"
-msgstr \\"\\"
-\\"Project-Id-Version: FUBAR\\\\n\\"
-\\"POT-Creation-Date: 1995-12-17T03:24:00.000Z\\\\n\\"
-\\"Content-Type: text/plain; charset=UTF-8\\\\n\\"
-\\"Content-Transfer-Encoding: 8bit\\\\n\\"
-\\"MIME-Version: 1.0\\\\n\\"
-\\"X-Generator: react-intl-po\\\\n\\"
+# This is a single line comment
+msgid ""
+msgstr ""
+"Project-Id-Version: FUBAR\\n"
+"POT-Creation-Date: 1995-12-17T03:24:00.000Z\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"MIME-Version: 1.0\\n"
+"X-Generator: react-intl-po\\n"
 
 
-"
+
 `;
 
 exports[`should return pot header, without any parameter 1`] = `
-"msgid \\"\\"
-msgstr \\"\\"
-\\"MIME-Version: 1.0\\\\n\\"
-\\"X-Generator: react-intl-po\\\\n\\"
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\\n"
+"X-Generator: react-intl-po\\n"
 
 
-"
+
 `;
 
 exports[`should return pot header, without empty options 1`] = `
-"msgid \\"\\"
-msgstr \\"\\"
-\\"MIME-Version: 1.0\\\\n\\"
-\\"X-Generator: react-intl-po\\\\n\\"
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\\n"
+"X-Generator: react-intl-po\\n"
 
 
-"
+
 `;

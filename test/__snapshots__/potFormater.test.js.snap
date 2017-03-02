@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return pot formatted string 1`] = `
+#: ./messages/src/containers/App/App.json
+#. [App.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
+#: ./messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
+msgid "Go to MCS website"
+msgstr ""
+
+`;
+
+exports[`should return pot formatted string, with multi line values 1`] = `
+#: ./messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton] - My description
+#. is
+#. quite
+#. long.
+#. defaultMessage is:
+#. This is
+#. multiline
+msgid "NotFound.errorButton"
+msgstr ""
+
+`;
+
+exports[`should return pot formatted string, with null or undefined description 1`] = `
+#: ./messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton]
+#. defaultMessage is:
+#. Go to MCS website
+msgid "Go to MCS website"
+msgstr ""
+
+`;
