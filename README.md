@@ -28,7 +28,7 @@
 [devDependency]: https://david-dm.org/evenchange4/react-intl-po#info=devDependencies
 [peerDependency-badge]: https://david-dm.org/evenchange4/react-intl-po/peer-status.svg?style=flat-square
 [peerDependency]: https://david-dm.org/evenchange4/react-intl-po#info=peerDependencies
-
+[![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/react-intl-po.svg)](https://greenkeeper.io/)
 
 ## Installation
 
