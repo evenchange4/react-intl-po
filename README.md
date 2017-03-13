@@ -1,5 +1,7 @@
 # react-intl-po
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/react-intl-po.svg)](https://greenkeeper.io/)
+
 > Extract POT from react-intl and convert back to json.
 >
 > messages.json → POT → PO → translation.json
