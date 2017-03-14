@@ -47,7 +47,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.18.0",
-    "codecov": "^1.0.1",
+    "codecov": "^2.0.1",
     "eslint": "^3.13.0",
     "jest": "^19.0.2",
     "lint-config-m": "^3.1.0",
