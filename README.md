@@ -32,7 +32,7 @@
 
 ## Demo
 
-- Standalone example based on Create-React-App: https://github.com/evenchange4/react-intl-po-example
+Standalone example based on Create-React-App: https://github.com/evenchange4/react-intl-po-example
 
 ## Installation
 
