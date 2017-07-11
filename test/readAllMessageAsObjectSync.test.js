@@ -27,3 +27,13 @@ it('should return messages object with id as key', () => {
     ),
   ).toMatchSnapshot();
 });
+
+it('should return messages object with id as context', () => {
+  expect(
+    readAllMessageAsObjectSync(
+      './test/messages/**/*.json',
+      undefined,
+      'id',
+    ),
+  ).toMatchSnapshot();
+});

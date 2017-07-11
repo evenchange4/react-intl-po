@@ -4,7 +4,7 @@ import path from 'path';
 import mkdirp from 'mkdirp';
 import chalk from 'chalk';
 import values from 'lodash/values';
-import flatten from 'lodash/flatten';
+import flattenDeep from 'lodash/flattenDeep';
 import flowRight from 'lodash/flowRight';
 import toObjectBy from 'to-object-by';
 import readAllMessageAsObjectSync from './readAllMessageAsObjectSync';
@@ -16,9 +16,10 @@ function filterPOAndWriteTranslateSync(srcPatterns,
   { messageKey = 'defaultMessage', messagesPattern, output }) {
   const translationTable = readAllPOAsObjectSync(srcPatterns);
   const messageList = flowRight(
-    flatten,                    // 3. return flatten object values
-    values,                     // 2. return object values
-    readAllMessageAsObjectSync, // 1. return message object
+    flattenDeep,                             // 4. return flattened values
+    objects => objects.map(o => values(o)),  // 3. return values
+    values,                                  // 2. return context objects
+    readAllMessageAsObjectSync,              // 1. return message object
   )(messagesPattern, messageKey);
 
   const locales = Object.keys(translationTable);
