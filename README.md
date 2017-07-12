@@ -107,8 +107,10 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 
 ### How to translate the same message into two different meanings?
 
-#### Option 1:
+#### Option 1 (Recommended):
 Set the `message-context (-c)` to `'id'` of message object from *babel-plugin-react-intl* (there is no context by default).
+
+The advantage of this option over Option 2 (below) is that PO file editors that provide features such as translation suggestions or error-checking often expect the message key to be `defaultMessage`.
 
 ```
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \

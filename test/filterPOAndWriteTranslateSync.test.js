@@ -22,10 +22,18 @@ it('should output one file per locale if a *directory* is set', () => {
   expect(JSON.parse(fs.readFileSync(`${output}/zh-TW.json`, 'utf8'))).toMatchSnapshot();
 });
 
-it('should optput currect filter merged file with id as messageKey', () => {
+it('should output correct filter merged file with id as messageKey', () => {
   const messagesPattern = './test/messages/**/*.json';
   const output = './test/temp/translations-id.json';
 
   filterPOAndWriteTranslateSync('./test/po/mcs-id.*.po', { messageKey: 'id', messagesPattern, output });
+  expect(JSON.parse(fs.readFileSync(output, 'utf8'))).toMatchSnapshot();
+});
+
+it('should output correct filter merged file with id as messageContext', () => {
+  const messagesPattern = './test/messages/**/*.json';
+  const output = './test/temp/translations-ctxt.json';
+
+  filterPOAndWriteTranslateSync('./test/po/mcs-ctxt.*.po', { messageContext: 'id', messagesPattern, output });
   expect(JSON.parse(fs.readFileSync(output, 'utf8'))).toMatchSnapshot();
 });
