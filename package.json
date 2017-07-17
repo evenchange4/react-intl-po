@@ -38,7 +38,7 @@
     "codecov": "codecov",
     "prepublish": "npm run build",
     "eslint": "eslint --ignore-path .gitignore .",
-    "format": "prettier --trailing-comma all --single-quote --write '{src,test}/**/*.js'"
+    "format": "prettier --trailing-comma all --single-quote --write '{src,test,config}/**/*.js'"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
