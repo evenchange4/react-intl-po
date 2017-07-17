@@ -62,11 +62,12 @@ $ rip json2pot '_translations/src/**/*.json' \
     -o ./mcs-public.pot
 ```
 
-| **Arguments**      |  **Description**                                                       |
-| ------------------ | ---------------------------------------------------------------------- |
-| `srcPatterns`      |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
-| `output (-o)`      |  The output pathname of *.pot* file to be translated                   |
-| `message-key (-k)` |  [Optional] Translation message key (default key is `defaultMessage`)  |
+| **Arguments**          |  **Description**                                                       |
+| ------------------     | ---------------------------------------------------------------------- |
+| `srcPatterns`          |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
+| `output (-o)`          |  The output pathname of *.pot* file to be translated                   |
+| `message-key (-k)`     |  [Optional] Translation message key (default key is `defaultMessage`)  |
+| `message-context (-c)` |  [Optional] Translation message context (defaults to no context)       |
 
 ### po2json
 
@@ -92,6 +93,7 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 | `messagesPattern (-m)` |  The pattern of *.json* files extracted from *babel-plugin-react-intl* |
 | `output (-o)`          |  The output pathname of a file / directory                             |
 | `message-key (-k)`     |  [Optional] Translation message key (default key is `defaultMessage`)  |
+| `message-context (-c)` |  [Optional] Translation message context (defaults to no context)       |
 
 
 ## API
@@ -105,6 +107,24 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 
 ### How to translate the same message into two different meanings?
 
+#### Option 1 (Recommended):
+Set the `message-context (-c)` to `'id'` of message object from *babel-plugin-react-intl* (there is no context by default).
+
+The advantage of this option over Option 2 (below) is that PO file editors that provide features such as translation suggestions or error-checking often expect the message key to be `defaultMessage`.
+
+```
+$ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
+     -m './_translations/src/**/*.json' \
+     -o './translations' \
+     -c 'id'
+
+$ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
+    -m './_translations/src/**/*.json' \
+    -o './translations.json' \
+    -c 'id'
+```
+
+#### Option 2:
 Set the `message-key (-k)` to `'id'` of message object from *babel-plugin-react-intl* (default key is `'defaultMessage'`). ([#41](https://github.com/evenchange4/react-intl-po/pull/41))
 
 ```

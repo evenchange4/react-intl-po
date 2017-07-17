@@ -27,6 +27,25 @@ msgstr ""
 
 `;
 
+exports[`should return pot formatted string, with message context 1`] = `
+#: ./messages/src/containers/App/App.json
+#. [App.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
+msgctxt "App.errorButton"
+msgid "Go to MCS website"
+msgstr ""
+
+#: ./messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
+msgctxt "NotFound.errorButton"
+msgid "Go to MCS website"
+msgstr ""
+
+`;
+
 exports[`should return pot formatted string, with multi line values 1`] = `
 #: ./messages/src/containers/NotFound/messages.json
 #. [NotFound.errorButton] - My description
