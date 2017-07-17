@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* chore(env): add node 8 to travisCI & switch to yarn
+
 ## [v2.1.0]
 > Jul 17, 2017
 
