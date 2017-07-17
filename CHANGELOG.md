@@ -3,6 +3,11 @@
 ## [HEAD]
 > Unreleased
 
+## [v2.1.0]
+> Jul 17, 2017
+
+* feat(contexts): Allow user to specify msgctxt with `-c` arguments. ([@Sand1929](https://github.com/Sand1929)in [#84])
+
 ## [v2.0.2]
 > Mar 02, 2017
 
