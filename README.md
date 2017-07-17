@@ -37,6 +37,8 @@ Standalone example based on Create-React-App: https://github.com/evenchange4/rea
 ## Installation
 
 ```console
+$ yarn add react-intl-po
+# or
 $ npm install react-intl-po --save
 ```
 
@@ -95,12 +97,6 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 | `message-key (-k)`     |  [Optional] Translation message key (default key is `defaultMessage`)  |
 | `message-context (-c)` |  [Optional] Translation message context (defaults to no context)       |
 
-
-## API
-
-```
-```
-
 ## Property
 
 ## Q&A
@@ -139,11 +135,23 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
     -k 'id'
 ```
 
-## Test
+## Development
+
+```console
+$ yarn install --pure-lockfile
+```
+
+### Requirements
+
+-   node >= 8.1.4
+-   npm >= 5.0.3
+-   yarn >= 0.27.5
+
+### Test
 
 ```
-$ npm run lint
-$ npm run test:watch
+$ yarn run lint
+$ yarn run test:watch
 ```
 
 ---
