@@ -20,7 +20,6 @@ const potCommentMultiLineWrapper = (commentPrefix, rawComment) => {
   return comments.reduce((a, b) => `${a}${commentPrefix} ${b}\n`, '');
 };
 
-
 /**
  * Formatting POT comments
  * @param {Object[]} messageList
@@ -40,7 +39,10 @@ const potCommentsFormater = messageList =>
     } else {
       out += potCommentMultiLineWrapper('#.', `[${id}]`);
     }
-    out += potCommentMultiLineWrapper('#.', `defaultMessage is:\n${defaultMessage}`);
+    out += potCommentMultiLineWrapper(
+      '#.',
+      `defaultMessage is:\n${defaultMessage}`,
+    );
 
     return out;
   }, '');
@@ -53,7 +55,7 @@ const potCommentsFormater = messageList =>
  * @author Sandy Suh
  */
 const potContextsFormater = messageContext =>
-  (messageContext ? `msgctxt ${JSON.stringify(messageContext)}\n` : '');
+  messageContext ? `msgctxt ${JSON.stringify(messageContext)}\n` : '';
 
 /**
  * Formatting POT comments
@@ -70,8 +72,15 @@ const potFormater = messageObject =>
     .sort()
     .map(id =>
       Object.keys(messageObject[id])
-            .map(context => `${potCommentsFormater(messageObject[id][context])}${potContextsFormater(context)}msgid ${JSON.stringify(id)}\nmsgstr ""\n`)
-            .join('\n'),
+        .map(
+          context =>
+            `${potCommentsFormater(
+              messageObject[id][context],
+            )}${potContextsFormater(context)}msgid ${JSON.stringify(
+              id,
+            )}\nmsgstr ""\n`,
+        )
+        .join('\n'),
     )
     .join('\n');
 

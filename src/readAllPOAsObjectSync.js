@@ -20,10 +20,10 @@ export const DEFAULT_MAPPER = filepath =>
 function readAllPOAsObjectSync(srcPatterns, localeMapper = DEFAULT_MAPPER) {
   const filepaths = globSync(srcPatterns);
 
-  return toObjectBy(filepaths, (filepath) => {
+  return toObjectBy(filepaths, filepath => {
     const json = po2json.parseFileSync(filepath);
     const translated = mapValues(json, o => o[1]); // omit plural
-    const locale = localeMapper(filepath);         // parse locale name
+    const locale = localeMapper(filepath); // parse locale name
 
     return {
       [locale]: translated,

@@ -8,6 +8,8 @@
 
 [![Dependency Status][dependency-badge]][dependency] [![devDependency Status][devDependency-badge]][devDependency] [![peerDependency Status][peerDependency-badge]][peerDependency]
 
+[![prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 [build-badge]: https://img.shields.io/travis/evenchange4/react-intl-po/master.svg?style=flat-square
 [build]: https://travis-ci.org/evenchange4/react-intl-po
 
@@ -150,7 +152,8 @@ $ yarn install --pure-lockfile
 ### Test
 
 ```
-$ yarn run lint
+$ yarn run format
+$ yarn run eslint
 $ yarn run test:watch
 ```
 
@@ -160,7 +163,7 @@ $ yarn run test:watch
 
 * ⇄ Pull requests and ★ Stars are always welcome.
 * For bugs and feature requests, please create an issue.
-* Pull requests must be accompanied by passing automated tests (`$ npm test`).
+* Pull requests must be accompanied by passing automated tests (`$ yarn run test`).
 
 ## [CHANGELOG](CHANGELOG.md)
 

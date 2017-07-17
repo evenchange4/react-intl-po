@@ -14,14 +14,21 @@ const mergeCustomizer = (accValue, objectValue) =>
 
 // hint: Use defaultMessage as key by default
 const indexBy = (messageKey, messageContext) => ({ messages, filename }) =>
-  messages.reduce((acc, message) => ({
-    ...acc,
-    [message[messageKey]]: mergeWith(
-      acc[message[messageKey]],
-      { [messageContext ? message[messageContext] : '']: [{ ...message, filename }]},
-      concatCustomizer,
-    ),
-  }), {});
+  messages.reduce(
+    (acc, message) => ({
+      ...acc,
+      [message[messageKey]]: mergeWith(
+        acc[message[messageKey]],
+        {
+          [messageContext ? message[messageContext] : '']: [
+            { ...message, filename },
+          ],
+        },
+        concatCustomizer,
+      ),
+    }),
+    {},
+  );
 
 /**
  * Read extracted .json file synchronized and
@@ -34,14 +41,23 @@ const indexBy = (messageKey, messageContext) => ({ messages, filename }) =>
  * @author Michael Hsu
  */
 
-function readAllMessageAsObjectSync(srcPatterns, messageKey = 'defaultMessage', messageContext = '') {
-  return globSync(srcPatterns)
-    // 1. read messages
-    .map(filename => ({ filename, messages: JSON.parse(fs.readFileSync(filename, 'utf8')) }))
-    // 2. convert message list to nested objects by messageKey and messageContext
-    .map(indexBy(messageKey, messageContext))
-    // 3. aggregate objects (merge and concat)
-    .reduce((acc, object) => mergeWith(acc, object, mergeCustomizer), {});
+function readAllMessageAsObjectSync(
+  srcPatterns,
+  messageKey = 'defaultMessage',
+  messageContext = '',
+) {
+  return (
+    globSync(srcPatterns)
+      // 1. read messages
+      .map(filename => ({
+        filename,
+        messages: JSON.parse(fs.readFileSync(filename, 'utf8')),
+      }))
+      // 2. convert message list to nested objects by messageKey and messageContext
+      .map(indexBy(messageKey, messageContext))
+      // 3. aggregate objects (merge and concat)
+      .reduce((acc, object) => mergeWith(acc, object, mergeCustomizer), {})
+  );
 }
 
 export default readAllMessageAsObjectSync;

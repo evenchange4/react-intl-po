@@ -1,223 +1,223 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should return messages object with default messageKey 1`] = `
-Object {
-  "Creator": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator 1",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.Creator 1",
-      },
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator 2",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.Creator 2",
-      },
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator",
-        "filename": "./test/messages/src/containers/NotFound/messages.json",
-        "id": "NotFound.Creator",
-      },
-    ],
-  },
-  "Go to MCS website": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Go to MCS website",
-        "description": "Click error Button",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.errorButton",
-      },
-      Object {
-        "defaultMessage": "Go to MCS website",
-        "description": "Click error Button",
-        "filename": "./test/messages/src/containers/NotFound/messages.json",
-        "id": "NotFound.errorButton",
-      },
-    ],
-  },
-  "The device is now private or deleted.": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "The device is now private or deleted.",
-        "description": "The error message when api response as 404 not found",
-        "filename": "./test/messages/src/containers/App/App.json",
+{
+  "The device is now private or deleted.": {
+    "": [
+      {
         "id": "App.errorMessage",
-      },
-    ],
+        "description": "The error message when api response as 404 not found",
+        "defaultMessage": "The device is now private or deleted.",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
   },
+  "Go to MCS website": {
+    "": [
+      {
+        "id": "App.errorButton",
+        "description": "Click error Button",
+        "defaultMessage": "Go to MCS website",
+        "filename": "./test/messages/src/containers/App/App.json"
+      },
+      {
+        "id": "NotFound.errorButton",
+        "description": "Click error Button",
+        "defaultMessage": "Go to MCS website",
+        "filename": "./test/messages/src/containers/NotFound/messages.json"
+      }
+    ]
+  },
+  "Creator": {
+    "": [
+      {
+        "id": "App.Creator 1",
+        "description": "Creator 1",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      },
+      {
+        "id": "App.Creator 2",
+        "description": "Creator 2",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      },
+      {
+        "id": "NotFound.Creator",
+        "description": "Creator",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/NotFound/messages.json"
+      }
+    ]
+  }
 }
 `;
 
 exports[`should return messages object with description as key 1`] = `
-Object {
-  "Click error Button": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Go to MCS website",
-        "description": "Click error Button",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.errorButton",
-      },
-    ],
-  },
-  "Creator 1": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator 1",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.Creator 1",
-      },
-    ],
-  },
-  "Creator 2": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator 2",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.Creator 2",
-      },
-    ],
-  },
-  "The error message when api response as 404 not found": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "The device is now private or deleted.",
-        "description": "The error message when api response as 404 not found",
-        "filename": "./test/messages/src/containers/App/App.json",
+{
+  "The error message when api response as 404 not found": {
+    "": [
+      {
         "id": "App.errorMessage",
-      },
-    ],
+        "description": "The error message when api response as 404 not found",
+        "defaultMessage": "The device is now private or deleted.",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
   },
+  "Click error Button": {
+    "": [
+      {
+        "id": "App.errorButton",
+        "description": "Click error Button",
+        "defaultMessage": "Go to MCS website",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
+  },
+  "Creator 1": {
+    "": [
+      {
+        "id": "App.Creator 1",
+        "description": "Creator 1",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
+  },
+  "Creator 2": {
+    "": [
+      {
+        "id": "App.Creator 2",
+        "description": "Creator 2",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
+  }
 }
 `;
 
 exports[`should return messages object with id as context 1`] = `
-Object {
-  "Creator": Object {
-    "App.Creator 1": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator 1",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.Creator 1",
-      },
-    ],
-    "App.Creator 2": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator 2",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.Creator 2",
-      },
-    ],
-    "NotFound.Creator": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator",
-        "filename": "./test/messages/src/containers/NotFound/messages.json",
-        "id": "NotFound.Creator",
-      },
-    ],
-  },
-  "Go to MCS website": Object {
-    "App.errorButton": Array [
-      Object {
-        "defaultMessage": "Go to MCS website",
-        "description": "Click error Button",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.errorButton",
-      },
-    ],
-    "NotFound.errorButton": Array [
-      Object {
-        "defaultMessage": "Go to MCS website",
-        "description": "Click error Button",
-        "filename": "./test/messages/src/containers/NotFound/messages.json",
-        "id": "NotFound.errorButton",
-      },
-    ],
-  },
-  "The device is now private or deleted.": Object {
-    "App.errorMessage": Array [
-      Object {
-        "defaultMessage": "The device is now private or deleted.",
-        "description": "The error message when api response as 404 not found",
-        "filename": "./test/messages/src/containers/App/App.json",
+{
+  "The device is now private or deleted.": {
+    "App.errorMessage": [
+      {
         "id": "App.errorMessage",
-      },
-    ],
+        "description": "The error message when api response as 404 not found",
+        "defaultMessage": "The device is now private or deleted.",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
   },
+  "Go to MCS website": {
+    "App.errorButton": [
+      {
+        "id": "App.errorButton",
+        "description": "Click error Button",
+        "defaultMessage": "Go to MCS website",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ],
+    "NotFound.errorButton": [
+      {
+        "id": "NotFound.errorButton",
+        "description": "Click error Button",
+        "defaultMessage": "Go to MCS website",
+        "filename": "./test/messages/src/containers/NotFound/messages.json"
+      }
+    ]
+  },
+  "Creator": {
+    "App.Creator 1": [
+      {
+        "id": "App.Creator 1",
+        "description": "Creator 1",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ],
+    "App.Creator 2": [
+      {
+        "id": "App.Creator 2",
+        "description": "Creator 2",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ],
+    "NotFound.Creator": [
+      {
+        "id": "NotFound.Creator",
+        "description": "Creator",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/NotFound/messages.json"
+      }
+    ]
+  }
 }
 `;
 
 exports[`should return messages object with id as key 1`] = `
-Object {
-  "App.Creator 1": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator 1",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.Creator 1",
-      },
-    ],
-  },
-  "App.Creator 2": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator 2",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.Creator 2",
-      },
-    ],
-  },
-  "App.errorButton": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Go to MCS website",
-        "description": "Click error Button",
-        "filename": "./test/messages/src/containers/App/App.json",
-        "id": "App.errorButton",
-      },
-    ],
-  },
-  "App.errorMessage": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "The device is now private or deleted.",
-        "description": "The error message when api response as 404 not found",
-        "filename": "./test/messages/src/containers/App/App.json",
+{
+  "App.errorMessage": {
+    "": [
+      {
         "id": "App.errorMessage",
-      },
-    ],
+        "description": "The error message when api response as 404 not found",
+        "defaultMessage": "The device is now private or deleted.",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
   },
-  "NotFound.Creator": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Creator",
-        "description": "Creator",
-        "filename": "./test/messages/src/containers/NotFound/messages.json",
-        "id": "NotFound.Creator",
-      },
-    ],
-  },
-  "NotFound.errorButton": Object {
-    "": Array [
-      Object {
-        "defaultMessage": "Go to MCS website",
+  "App.errorButton": {
+    "": [
+      {
+        "id": "App.errorButton",
         "description": "Click error Button",
-        "filename": "./test/messages/src/containers/NotFound/messages.json",
-        "id": "NotFound.errorButton",
-      },
-    ],
+        "defaultMessage": "Go to MCS website",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
   },
+  "App.Creator 1": {
+    "": [
+      {
+        "id": "App.Creator 1",
+        "description": "Creator 1",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
+  },
+  "App.Creator 2": {
+    "": [
+      {
+        "id": "App.Creator 2",
+        "description": "Creator 2",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
+  },
+  "NotFound.errorButton": {
+    "": [
+      {
+        "id": "NotFound.errorButton",
+        "description": "Click error Button",
+        "defaultMessage": "Go to MCS website",
+        "filename": "./test/messages/src/containers/NotFound/messages.json"
+      }
+    ]
+  },
+  "NotFound.Creator": {
+    "": [
+      {
+        "id": "NotFound.Creator",
+        "description": "Creator",
+        "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/NotFound/messages.json"
+      }
+    ]
+  }
 }
 `;

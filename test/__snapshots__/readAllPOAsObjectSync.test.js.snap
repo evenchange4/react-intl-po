@@ -1,29 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should return po object with custom localeMapper 1`] = `
-Object {
-  "zh-CN": Object {
-    "": undefined,
-    "( default )": "（默认值）",
+{
+  "zh-CN": {
+    "( default )": "（默认值）"
   },
-  "zh-TW": Object {
-    "": undefined,
-    "( default )": "（默認值）",
-  },
+  "zh-TW": {
+    "( default )": "（默認值）"
+  }
 }
 `;
 
 exports[`should return po object with default localeMapper 1`] = `
-Object {
-  "zh-CN": Object {
-    "": undefined,
+{
+  "zh-CN": {
     "Creator": "建立者（簡中）",
-    "Version": "版本（簡中）",
+    "Version": "版本（簡中）"
   },
-  "zh-TW": Object {
-    "": undefined,
+  "zh-TW": {
     "Creator": "建立者",
-    "Version": "版本",
-  },
+    "Version": "版本"
+  }
 }
 `;

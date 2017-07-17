@@ -6,8 +6,10 @@ import readAllMessageAsObjectSync from './readAllMessageAsObjectSync';
 import potFormater from './potFormater';
 import potHeader from './potHeader';
 
-function extractAndWritePOTFromMessagesSync(srcPatterns,
-  { messageKey = 'defaultMessage', output, headerOptions }) {
+function extractAndWritePOTFromMessagesSync(
+  srcPatterns,
+  { messageKey = 'defaultMessage', output, headerOptions },
+) {
   let result = potHeader({
     potCreationDate: new Date(),
     charset: 'UTF-8',
@@ -16,7 +18,7 @@ function extractAndWritePOTFromMessagesSync(srcPatterns,
   });
 
   result += flowRight(
-    potFormater,                // 2. return formated string
+    potFormater, // 2. return formated string
     readAllMessageAsObjectSync, // 1. return messages object
   )(srcPatterns, messageKey);
 
