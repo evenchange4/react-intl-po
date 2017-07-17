@@ -150,7 +150,8 @@ $ yarn install --pure-lockfile
 ### Test
 
 ```
-$ yarn run lint
+$ yarn run format
+$ yarn run eslint
 $ yarn run test:watch
 ```
 
@@ -160,7 +161,7 @@ $ yarn run test:watch
 
 * ⇄ Pull requests and ★ Stars are always welcome.
 * For bugs and feature requests, please create an issue.
-* Pull requests must be accompanied by passing automated tests (`$ npm test`).
+* Pull requests must be accompanied by passing automated tests (`$ yarn run test`).
 
 ## [CHANGELOG](CHANGELOG.md)
 

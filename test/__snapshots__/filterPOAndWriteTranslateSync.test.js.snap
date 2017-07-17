@@ -1,58 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should output correct filter merged file with id as messageContext 1`] = `
-Object {
-  "zh-CN": Object {
+{
+  "zh-CN": {
     "App.Creator 1": "建立者（簡中1）",
-    "App.Creator 2": "建立者（簡中2）",
+    "App.Creator 2": "建立者（簡中2）"
   },
-  "zh-TW": Object {
+  "zh-TW": {
     "App.Creator 1": "建立者（繁中1）",
-    "App.Creator 2": "建立者（繁中2）",
-  },
+    "App.Creator 2": "建立者（繁中2）"
+  }
 }
 `;
 
 exports[`should output correct filter merged file with id as messageKey 1`] = `
-Object {
-  "zh-CN": Object {
+{
+  "zh-CN": {
     "App.Creator 1": "建立者（簡中1）",
-    "App.Creator 2": "建立者（簡中2）",
+    "App.Creator 2": "建立者（簡中2）"
   },
-  "zh-TW": Object {
+  "zh-TW": {
     "App.Creator 1": "建立者（繁中1）",
-    "App.Creator 2": "建立者（繁中2）",
-  },
+    "App.Creator 2": "建立者（繁中2）"
+  }
 }
 `;
 
 exports[`should output one file per locale if a *directory* is set 1`] = `
-Object {
+{
   "App.Creator 1": "建立者（簡中）",
   "App.Creator 2": "建立者（簡中）",
-  "NotFound.Creator": "建立者（簡中）",
+  "NotFound.Creator": "建立者（簡中）"
 }
 `;
 
 exports[`should output one file per locale if a *directory* is set 2`] = `
-Object {
+{
   "App.Creator 1": "建立者",
   "App.Creator 2": "建立者",
-  "NotFound.Creator": "建立者",
+  "NotFound.Creator": "建立者"
 }
 `;
 
 exports[`should output one merged file if a *json file* is set 1`] = `
-Object {
-  "zh-CN": Object {
+{
+  "zh-CN": {
     "App.Creator 1": "建立者（簡中）",
     "App.Creator 2": "建立者（簡中）",
-    "NotFound.Creator": "建立者（簡中）",
+    "NotFound.Creator": "建立者（簡中）"
   },
-  "zh-TW": Object {
+  "zh-TW": {
     "App.Creator 1": "建立者",
     "App.Creator 2": "建立者",
-    "NotFound.Creator": "建立者",
-  },
+    "NotFound.Creator": "建立者"
+  }
 }
 `;

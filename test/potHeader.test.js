@@ -5,15 +5,11 @@ it('should return a function', () => {
 });
 
 it('should return pot header, without any parameter', () => {
-  expect(
-    potHeader(),
-  ).toMatchSnapshot();
+  expect(potHeader()).toMatchSnapshot();
 });
 
 it('should return pot header, without empty options', () => {
-  expect(
-    potHeader({}),
-  ).toMatchSnapshot();
+  expect(potHeader({})).toMatchSnapshot();
 });
 
 it('should return pot header, with a single comment', () => {
@@ -39,7 +35,6 @@ it('should return pot header, with a list of comments', () => {
     }),
   ).toMatchSnapshot();
 });
-
 
 it('should return pot header, with all options', () => {
   expect(

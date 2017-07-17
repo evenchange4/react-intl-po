@@ -9,7 +9,7 @@ notifications:
   email: evenchange4@gmail.com
 
 script:
-  - yarn run lint
+  - yarn run eslint
   - yarn run test:coverage
 
 after_success: npm run codecov
