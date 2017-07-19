@@ -15,7 +15,12 @@ const getContext = messageContext => message =>
 
 function filterPOAndWriteTranslateSync(
   srcPatterns,
-  { messageKey = 'defaultMessage', messageContext, messagesPattern, output },
+  {
+    messageKey = 'defaultMessage',
+    messageContext = '',
+    messagesPattern,
+    output,
+  },
 ) {
   const placeholder = R.pipe(
     readAllMessageAsObjectSync,

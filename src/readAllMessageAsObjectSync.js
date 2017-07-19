@@ -2,14 +2,13 @@ import fs from 'fs';
 import { sync as globSync } from 'glob';
 import R from 'ramda';
 
-const DEFAULT_CONTEXT_KEY = '';
-
 /**
  * Read extracted .json file synchronized and
  * aggregates origin messages objects
  *
  * @param {String} srcPatterns - path to translated .json file
  * @param {String} messageKey - [defaultMessage]
+ * @param {String} messageContext - [''] empty string
  * @return {Object} messages - return aggregates object
  *
  * @author Michael Hsu
@@ -18,7 +17,7 @@ const DEFAULT_CONTEXT_KEY = '';
 const readAllMessageAsObjectSync = (
   srcPatterns,
   messageKey = 'defaultMessage',
-  messageContext,
+  messageContext = '',
 ) =>
   R.pipe(
     globSync,
@@ -33,7 +32,7 @@ const readAllMessageAsObjectSync = (
     // 2. Array [{ ...messages, filename  }, ... ]
     R.groupBy(R.prop(messageKey)),
     // 3. Object { messageKey: { }, ... }
-    R.mapObjIndexed(R.groupBy(R.propOr(DEFAULT_CONTEXT_KEY, messageContext))),
+    R.mapObjIndexed(R.groupBy(R.propOr(messageContext, messageContext))),
     // 4. Object { messagekey: { messageContext: { } } }
     // 4. groupBy context (nested for -c argument)
   )(srcPatterns);
