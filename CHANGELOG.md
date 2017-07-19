@@ -17,6 +17,8 @@
 
 * feat(contexts): Allow user to specify msgctxt with `-c` arguments. ([@Sand1929](https://github.com/Sand1929)in [#84])
 
+Example: https://github.com/evenchange4/react-intl-po-example#option
+
 ## [v2.0.2]
 > Mar 02, 2017
 
