@@ -98,3 +98,63 @@ msgid "The device is now private or deleted."
 msgstr ""
 
 `;
+
+exports[`should return messages object with messageContext 1`] = `
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2017-02-01T11:23:12.000Z\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"MIME-Version: 1.0\\n"
+"X-Generator: react-intl-po\\n"
+
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator 1] - Creator 1
+#. defaultMessage is:
+#. Creator
+msgctxt "App.Creator 1"
+msgid "Creator"
+msgstr ""
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator 2] - Creator 2
+#. defaultMessage is:
+#. Creator
+msgctxt "App.Creator 2"
+msgid "Creator"
+msgstr ""
+
+#: ./test/messages/src/containers/NotFound/messages.json
+#. [NotFound.Creator] - Creator
+#. defaultMessage is:
+#. Creator
+msgctxt "NotFound.Creator"
+msgid "Creator"
+msgstr ""
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
+msgctxt "App.errorButton"
+msgid "Go to MCS website"
+msgstr ""
+
+#: ./test/messages/src/containers/NotFound/messages.json
+#. [NotFound.errorButton] - Click error Button
+#. defaultMessage is:
+#. Go to MCS website
+msgctxt "NotFound.errorButton"
+msgid "Go to MCS website"
+msgstr ""
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.errorMessage] - The error message when api response as 404 not found
+#. defaultMessage is:
+#. The device is now private or deleted.
+msgctxt "App.errorMessage"
+msgid "The device is now private or deleted."
+msgstr ""
+
+`;

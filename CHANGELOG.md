@@ -7,6 +7,7 @@
 * chore(dev): introduce prettier & switch from eslint-config-m to airbnb-base
 * chore(test): upgrade Jest to 20
 * refactor(ramda): switch from lodash to ramda.js
+* fix(context): missing the `messageContext` arguments for extractAndWritePOTFromMessagesSync function.
 
 ## [v2.1.0]
 > Jul 17, 2017
