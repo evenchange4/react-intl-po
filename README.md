@@ -122,7 +122,9 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
     -c 'id'
 ```
 
-#### Option 2:
+Example:  https://github.com/evenchange4/react-intl-po-example#option
+
+#### Option 2: [Maybe deprecated next major release]
 Set the `message-key (-k)` to `'id'` of message object from *babel-plugin-react-intl* (default key is `'defaultMessage'`). ([#41](https://github.com/evenchange4/react-intl-po/pull/41))
 
 ```
