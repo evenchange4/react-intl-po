@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+## [v2.1.1]
+> Jul 19, 2017
+
 * chore(env): add node 8 to travisCI & switch to yarn
 * chore(dev): introduce prettier & switch from eslint-config-m to airbnb-base
 * chore(test): upgrade Jest to 20
