@@ -143,6 +143,18 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 $ yarn install --pure-lockfile
 ```
 
+### Ramda.js
+
+You can use `R.tap()` for developing.
+
+```diff
+R.pipe(
+  R.concat(...),
++ R.tap(e => console.log(e)),
+  R.mergeAll,
+);
+```
+
 ### Requirements
 
 -   node >= 8.1.4

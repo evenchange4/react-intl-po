@@ -1,3 +1,5 @@
+import R from 'ramda';
+
 /**
  * Create a POT header string
  * @param {Object} options
@@ -15,34 +17,32 @@
  */
 
 const potHeader = (options = {}) => {
-  let header = '';
+  const o = R.evolve({
+    comments: R.pipe(
+      R.cond([[R.is(Array), R.identity], [R.is(String), R.of]]),
+      R.map(R.split('\n')),
+      R.flatten,
+      R.map(e => `# ${e}`),
+      R.join('\n'),
+    ),
+    projectIdVersion: e => `"Project-Id-Version: ${e}\\n"`,
+    potCreationDate: e => `"POT-Creation-Date: ${e.toISOString()}\\n"`,
+    charset: e => `"Content-Type: text/plain; charset=${e}\\n"`,
+    encoding: e => `"Content-Transfer-Encoding: ${e}\\n"`,
+  })(options);
 
-  if (options.comments) {
-    let comments = options.comments;
-    if (!Array.isArray(options.comments)) {
-      comments = [options.comments];
-    }
-    comments = comments.reduce((o, n) => o.concat(n.split('\n')), []);
-    header += `${comments.map(comment => `# ${comment}`).join('\n')}\n`;
-  }
-  header += 'msgid ""\nmsgstr ""\n';
+  return `${o.comments}
+msgid ""
+msgstr ""
+${o.projectIdVersion}
+${o.potCreationDate}
+${o.charset}
+${o.encoding}
+"MIME-Version: 1.0\\n"
+"X-Generator: react-intl-po\\n"
 
-  if (options.projectIdVersion) {
-    header += `"Project-Id-Version: ${options.projectIdVersion}\\n"\n`;
-  }
-  if (options.potCreationDate) {
-    header += `"POT-Creation-Date: ${options.potCreationDate.toISOString()}\\n"\n`;
-  }
-  if (options.charset) {
-    header += `"Content-Type: text/plain; charset=${options.charset}\\n"\n`;
-  }
-  if (options.encoding) {
-    header += `"Content-Transfer-Encoding: ${options.encoding}\\n"\n`;
-  }
-  header += '"MIME-Version: 1.0\\n"\n';
-  header += '"X-Generator: react-intl-po\\n"\n';
-  header += '\n\n';
-  return header;
+
+`.replace(/undefined\r?\n|\r/g, '');
 };
 
 export default potHeader;

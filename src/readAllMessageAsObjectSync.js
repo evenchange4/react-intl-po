@@ -1,34 +1,8 @@
 import fs from 'fs';
 import { sync as globSync } from 'glob';
-import mergeWith from 'lodash/mergeWith';
-import isArray from 'lodash/isArray';
+import R from 'ramda';
 
-const concatCustomizer = (accValue, objectValue) => {
-  if (!isArray(accValue)) return objectValue;
-
-  return accValue.concat(objectValue);
-};
-
-const mergeCustomizer = (accValue, objectValue) =>
-  mergeWith(accValue, objectValue, concatCustomizer);
-
-// hint: Use defaultMessage as key by default
-const indexBy = (messageKey, messageContext) => ({ messages, filename }) =>
-  messages.reduce(
-    (acc, message) => ({
-      ...acc,
-      [message[messageKey]]: mergeWith(
-        acc[message[messageKey]],
-        {
-          [messageContext ? message[messageContext] : '']: [
-            { ...message, filename },
-          ],
-        },
-        concatCustomizer,
-      ),
-    }),
-    {},
-  );
+const DEFAULT_CONTEXT_KEY = '';
 
 /**
  * Read extracted .json file synchronized and
@@ -41,23 +15,27 @@ const indexBy = (messageKey, messageContext) => ({ messages, filename }) =>
  * @author Michael Hsu
  */
 
-function readAllMessageAsObjectSync(
+const readAllMessageAsObjectSync = (
   srcPatterns,
   messageKey = 'defaultMessage',
-  messageContext = '',
-) {
-  return (
-    globSync(srcPatterns)
-      // 1. read messages
-      .map(filename => ({
+  messageContext,
+) =>
+  R.pipe(
+    globSync,
+    // 1. Array [filename, ...]
+    R.map(filename =>
+      JSON.parse(fs.readFileSync(filename, 'utf8')).map(e => ({
+        ...e,
         filename,
-        messages: JSON.parse(fs.readFileSync(filename, 'utf8')),
-      }))
-      // 2. convert message list to nested objects by messageKey and messageContext
-      .map(indexBy(messageKey, messageContext))
-      // 3. aggregate objects (merge and concat)
-      .reduce((acc, object) => mergeWith(acc, object, mergeCustomizer), {})
-  );
-}
+      })),
+    ),
+    R.flatten,
+    // 2. Array [{ ...messages, filename  }, ... ]
+    R.groupBy(R.prop(messageKey)),
+    // 3. Object { messageKey: { }, ... }
+    R.mapObjIndexed(R.groupBy(R.propOr(DEFAULT_CONTEXT_KEY, messageContext))),
+    // 4. Object { messagekey: { messageContext: { } } }
+    // 4. groupBy context (nested for -c argument)
+  )(srcPatterns);
 
 export default readAllMessageAsObjectSync;
