@@ -9,7 +9,7 @@ import potHeader from './potHeader';
 
 function extractAndWritePOTFromMessagesSync(
   srcPatterns,
-  { messageKey = 'defaultMessage', output, headerOptions },
+  { messageKey = 'defaultMessage', messageContext = '', output, headerOptions },
 ) {
   const result = R.pipe(
     readAllMessageAsObjectSync,
@@ -25,7 +25,7 @@ function extractAndWritePOTFromMessagesSync(
       }),
     ),
     // 3. String: with pot head
-  )(srcPatterns, messageKey);
+  )(srcPatterns, messageKey, messageContext);
 
   // Output
   fs.writeFileSync(output, result);

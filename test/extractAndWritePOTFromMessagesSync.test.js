@@ -31,3 +31,17 @@ it('should return messages object with custom message key mapper', () => {
   });
   expect(fs.readFileSync(output, 'utf8')).toMatchSnapshot();
 });
+
+it('should return messages object with messageContext', () => {
+  const output = './test/temp/extract-messageContext.pot';
+  const headerOptions = {
+    potCreationDate: new Date(Date.UTC(2017, 1, 1, 11, 23, 12)),
+  };
+
+  extractAndWritePOTFromMessagesSync('./test/messages/**/*.json', {
+    output,
+    headerOptions,
+    messageContext: 'id',
+  });
+  expect(fs.readFileSync(output, 'utf8')).toMatchSnapshot();
+});
