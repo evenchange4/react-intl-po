@@ -22,10 +22,8 @@ Please take a look at standalone repo based on Create-React-App: https://github.
 
 ## Installation
 
-```console
+```sh
 $ yarn add react-intl-po
-# or
-$ npm install react-intl-po --save
 ```
 
 ## Requirements and Workflow
@@ -44,7 +42,7 @@ There are two sub-commands of `react-intl-po` or `rip`:
 
 ### json2pot
 
-```
+```sh
 $ rip json2pot '_translations/src/**/*.json' \
     -o ./mcs-public.pot
 ```
@@ -60,7 +58,7 @@ $ rip json2pot '_translations/src/**/*.json' \
 
 #### Case 1: Output one file per locale if a `directory` is set
 
-```
+```sh
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
      -m './_translations/src/**/*.json' \
      -o './translations'
@@ -68,7 +66,7 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
 
 #### Case 2: Output one merged file if a `.json file` is set
 
-```
+```sh
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
      -m './_translations/src/**/*.json' \
      -o './translations.json'
@@ -94,7 +92,7 @@ Set the `message-context (-c)` to `'id'` of message object from _babel-plugin-re
 
 The advantage of this option over Option 2 (below) is that PO file editors that provide features such as translation suggestions or error-checking often expect the message key to be `defaultMessage`.
 
-```
+```sh
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
      -m './_translations/src/**/*.json' \
      -o './translations' \
@@ -112,7 +110,7 @@ Example: https://github.com/evenchange4/react-intl-po-example#option
 
 Set the `message-key (-k)` to `'id'` of message object from _babel-plugin-react-intl_ (default key is `'defaultMessage'`). ([#41](https://github.com/evenchange4/react-intl-po/pull/41))
 
-```
+```sh
 $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \
      -m './_translations/src/**/*.json' \
      -o './translations' \
@@ -126,7 +124,7 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 
 ## Development
 
-```console
+```sh
 $ yarn install --pure-lockfile
 ```
 
@@ -149,10 +147,21 @@ R.pipe(
 
 ### Test
 
-```
+```sh
 $ yarn run format
 $ yarn run eslint
 $ yarn run test:watch
+```
+
+### NPM Release
+
+> Any git tags.
+
+1. Create a new git tag
+2. Update `CHANGELOG.md`
+
+```sh
+$ npm version patch
 ```
 
 ---
