@@ -17,17 +17,8 @@
     "rip": "lib/cli.js",
     "react-intl-po": "lib/cli.js"
   },
-  "files": [
-    "lib",
-    "src",
-    "test"
-  ],
-  "keywords": [
-    "react-intl",
-    "babel-plugin-react-intl",
-    "po",
-    "pot"
-  ],
+  "files": ["lib", "src", "test"],
+  "keywords": ["react-intl", "babel-plugin-react-intl", "po", "pot"],
   "scripts": {
     "clean": "rm -rf lib",
     "prebuild": "npm run clean",
@@ -38,7 +29,9 @@
     "codecov": "codecov",
     "prepublish": "npm run build",
     "eslint": "eslint --ignore-path .gitignore .",
-    "format": "prettier --trailing-comma all --single-quote --write '{src,test,config}/**/*.js'"
+    "format":
+      "prettier --trailing-comma all --single-quote --write '{src,test,config}/**/*.js' '*.{md,json}'",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -53,28 +46,30 @@
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jest": "21.6.2",
     "eslint-plugin-prettier": "2.5.0",
+    "husky": "0.14.3",
     "jest": "22.1.1",
+    "lint-staged": "6.0.0",
     "prettier": "1.10.2"
   },
   "babel": {
-    "presets": [
-      "es2015",
-      "stage-0"
-    ],
-    "plugins": [
-      "add-module-exports"
-    ]
+    "presets": ["es2015", "stage-0"],
+    "plugins": ["add-module-exports"]
   },
   "jest": {
     "testEnvironment": "node",
     "testRegex": "(/test/.*|\\.(test))\\.js$",
-    "moduleFileExtensions": [
-      "js"
-    ],
+    "moduleFileExtensions": ["js"],
     "snapshotSerializers": [
       "./config/stringSerializer.js",
       "./config/jsonSerializer.js"
     ]
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "*.{js,json,md}": ["prettier --write", "git add"]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -85,22 +80,13 @@
       "prettier/flowtype",
       "plugin:jest/recommended"
     ],
-    "plugins": [
-      "prettier",
-      "jest"
-    ],
+    "plugins": ["prettier", "jest"],
     "env": {
       "jest/globals": true
     },
     "rules": {
       "import/no-extraneous-dependencies": 0,
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "trailingComma": "all"
-        }
-      ]
+      "prettier/prettier": ["error"]
     }
   },
   "dependencies": {
