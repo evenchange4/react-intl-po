@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { sync as globSync } from 'glob';
-import R from 'ramda';
+import * as R from 'ramda';
 
 /**
  * Read extracted .json file synchronized and

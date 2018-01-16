@@ -1,6 +1,6 @@
 import { sync as globSync } from 'glob';
 import path from 'path';
-import R from 'ramda';
+import * as R from 'ramda';
 import po2jsonHelper from './utils/po2jsonHelper';
 
 export const DEFAULT_MAPPER = filepath =>

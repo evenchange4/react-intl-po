@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 import mkdirp from 'mkdirp';
-import R from 'ramda';
+import * as R from 'ramda';
 import chalk from 'chalk';
 import readAllMessageAsObjectSync from './readAllMessageAsObjectSync';
 import readAllPOAsObjectSync from './readAllPOAsObjectSync';

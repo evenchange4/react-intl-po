@@ -1,4 +1,4 @@
-import R from 'ramda';
+import * as R from 'ramda';
 import po2json from 'po2json';
 
 const parseFileSync = R.pipe(
