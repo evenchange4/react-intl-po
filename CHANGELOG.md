@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* chore: ncu update
+
 ## [v2.1.1]
 > Jul 19, 2017
 

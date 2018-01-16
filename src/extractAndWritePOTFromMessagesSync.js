@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import chalk from 'chalk';
-import R from 'ramda';
+import * as R from 'ramda';
 import readAllMessageAsObjectSync from './readAllMessageAsObjectSync';
 import potFormater from './potFormater';
 import potHeader from './potHeader';
