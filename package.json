@@ -29,8 +29,7 @@
     "codecov": "codecov",
     "prepublish": "npm run build",
     "eslint": "eslint --ignore-path .gitignore .",
-    "format":
-      "prettier --trailing-comma all --single-quote --write '{src,test,config}/**/*.js' '*.{md,json}'",
+    "format": "prettier --write '{src,test,config}/**/*.js' '*.{md,json}'",
     "precommit": "lint-staged"
   },
   "devDependencies": {
