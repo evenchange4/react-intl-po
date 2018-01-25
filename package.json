@@ -89,11 +89,11 @@
     }
   },
   "dependencies": {
-    "chalk": "2.3.0",
-    "commander": "2.13.0",
-    "glob": "7.1.2",
-    "mkdirp": "0.5.1",
-    "po2json": "0.4.5",
-    "ramda": "0.25.0"
+    "chalk": "^2.3.0",
+    "commander": "^2.13.0",
+    "glob": "^7.1.2",
+    "mkdirp": "^0.5.1",
+    "po2json": "^0.4.5",
+    "ramda": "^0.25.0"
   }
 }
