@@ -13,12 +13,17 @@ const isAJSONFile = string => /.json/.test(string);
 const getContext = messageContext => message =>
   messageContext ? `${message[messageContext]}\u0004` : '';
 
+const makeLangMapper = (pattern, index = 1) => filepath =>
+  filepath.match(pattern)[index];
+
 function filterPOAndWriteTranslateSync(
   srcPatterns,
   {
     messageKey = 'defaultMessage',
     messageContext = '',
     messagesPattern,
+    langMapperPattern,
+    langMapperPatternIndex,
     output,
   },
 ) {
@@ -39,6 +44,11 @@ function filterPOAndWriteTranslateSync(
     // 6. Object { id: key }, key = (messageContext + messagekey)
   )(messagesPattern, messageKey, messageContext);
 
+  const langMapperFn =
+    langMapperPattern !== undefined
+      ? makeLangMapper(langMapperPattern, langMapperPatternIndex)
+      : undefined;
+
   const result = R.pipe(
     readAllPOAsObjectSync,
     // 1. Object { locale: { key: '' } }
@@ -51,7 +61,7 @@ function filterPOAndWriteTranslateSync(
     // 2. Array [{ locale: { id: '' } }], replace key to translated string
     R.mergeAll,
     // 3. Object { locale: { id: '' } }
-  )(srcPatterns);
+  )(srcPatterns, langMapperFn);
 
   // Output
   if (isAJSONFile(output)) {
