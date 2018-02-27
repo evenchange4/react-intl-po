@@ -32,6 +32,26 @@ it('should output one file per locale if a *directory* is set', () => {
   ).toMatchSnapshot();
 });
 
+it('should output one file per locale if a *directory* is set, using custom lang mapper regex', () => {
+  const messagesPattern = './test/messages/**/*.json';
+  const output = './test/temp/translations';
+  const langMapperPattern = /.*\/(\w{1,3}_\w{1,3})\/.*/;
+  const langMapperPatternIndex = 1;
+
+  filterPOAndWriteTranslateSync('./test/alternate_po/**/messages.po', {
+    messagesPattern,
+    langMapperPattern,
+    langMapperPatternIndex,
+    output,
+  });
+  expect(
+    JSON.parse(fs.readFileSync(`${output}/zh_CN.json`, 'utf8')),
+  ).toMatchSnapshot();
+  expect(
+    JSON.parse(fs.readFileSync(`${output}/zh_TW.json`, 'utf8')),
+  ).toMatchSnapshot();
+});
+
 it('should output correct filter merged file with id as messageKey', () => {
   const messagesPattern = './test/messages/**/*.json';
   const output = './test/temp/translations-id.json';

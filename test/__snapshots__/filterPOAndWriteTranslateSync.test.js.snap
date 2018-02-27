@@ -64,6 +64,28 @@ exports[`should output one file per locale if a *directory* is set 2`] = `
 }
 `;
 
+exports[`should output one file per locale if a *directory* is set, using custom lang mapper regex 1`] = `
+{
+  "App.errorMessage": "",
+  "App.errorButton": "",
+  "NotFound.errorButton": "",
+  "App.Creator 1": "",
+  "App.Creator 2": "",
+  "NotFound.Creator": ""
+}
+`;
+
+exports[`should output one file per locale if a *directory* is set, using custom lang mapper regex 2`] = `
+{
+  "App.errorMessage": "",
+  "App.errorButton": "",
+  "NotFound.errorButton": "",
+  "App.Creator 1": "",
+  "App.Creator 2": "",
+  "NotFound.Creator": ""
+}
+`;
+
 exports[`should output one merged file if a *json file* is set 1`] = `
 {
   "zh-CN": {
