@@ -37,8 +37,8 @@ $ yarn add react-intl-po
 
 There are two sub-commands of `react-intl-po` or `rip`:
 
-1. json2pot: Convert the json files extracted from _babel-plugin-react-intl_ into one `.pot` file.
-2. po2json: Convert translated _.po_ files back to `.json` format.
+1.  json2pot: Convert the json files extracted from _babel-plugin-react-intl_ into one `.pot` file.
+2.  po2json: Convert translated _.po_ files back to `.json` format.
 
 ### json2pot
 
@@ -47,12 +47,12 @@ $ rip json2pot '_translations/src/**/*.json' \
     -o ./mcs-public.pot
 ```
 
-| **Arguments**          | **Description**                                                       |
-| ---------------------- | --------------------------------------------------------------------- |
-| `srcPatterns`          | The pattern of _.json_ files extracted from _babel-plugin-react-intl_ |
-| `output (-o)`          | The output pathname of _.pot_ file to be translated                   |
-| `message-key (-k)`     | [Optional] Translation message key (default key is `defaultMessage`)  |
-| `message-context (-c)` | [Optional] Translation message context (defaults to no context)       |
+| **Arguments**                     | **Description**                                                       |
+| --------------------------------- | --------------------------------------------------------------------- |
+| `srcPatterns`                     | The pattern of _.json_ files extracted from _babel-plugin-react-intl_ |
+| `-o, --output <path>`             | The output pathname of _.pot_ file to be translated                   |
+| `-k, --message-key [key]`         | [Optional] Translation message key (default key is `defaultMessage`)  |
+| `-c, --message-context [context]` | [Optional] Translation message context (defaults to no context)       |
 
 ### po2json
 
@@ -72,13 +72,15 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
      -o './translations.json'
 ```
 
-| **Arguments**          | **Description**                                                       |
-| ---------------------- | --------------------------------------------------------------------- |
-| `srcPatterns`          | The pattern of translated _.po_ files                                 |
-| `messagesPattern (-m)` | The pattern of _.json_ files extracted from _babel-plugin-react-intl_ |
-| `output (-o)`          | The output pathname of a file / directory                             |
-| `message-key (-k)`     | [Optional] Translation message key (default key is `defaultMessage`)  |
-| `message-context (-c)` | [Optional] Translation message context (defaults to no context)       |
+| **Arguments**                             | **Description**                                                                                                                                                                                                                                   |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `srcPatterns`                             | The pattern of translated _.po_ files                                                                                                                                                                                                             |
+| `-m, --messages-pattern <path>`           | The pattern of _.json_ files extracted from _babel-plugin-react-intl_                                                                                                                                                                             |
+| `-o, --output <path>`                     | The output pathname of a file / directory                                                                                                                                                                                                         |
+| `-k, --message-key [key]`                 | [Optional] Translation message key (default key is `defaultMessage`)                                                                                                                                                                              |
+| `-c, --message-context [context]`         | [Optional] Translation message context (defaults to no context)                                                                                                                                                                                   |
+| `-l, --lang-mapper-pattern <pattern>`     | [Optional] Custom regex to use for lang mapping. [PR#122](https://github.com/evenchange4/react-intl-po/pull/122)                                                                                                                                  |
+| `-i, --lang-mapper-pattern-index [index]` | [Optional] When specifying a custom lang-mapper-pattern, the index of match to use for the lang mapping. Default is 1, index is ignored if not using a custom lang mapping regex. [PR#122](https://github.com/evenchange4/react-intl-po/pull/122) |
 
 ## Property
 
@@ -142,8 +144,8 @@ R.pipe(
 
 ### Requirements
 
-* node >= 9.4.0
-* yarn >= 1.3.2
+* node >= 9.8.0
+* yarn >= 1.5.1
 
 ### Test
 
@@ -157,8 +159,8 @@ $ yarn run test:watch
 
 > Any git tags.
 
-1. Create a new git tag
-2. Update `CHANGELOG.md`
+1.  Create a new git tag
+2.  Update `CHANGELOG.md`
 
 ```sh
 $ npm version patch

@@ -4,6 +4,9 @@
 
 > Unreleased
 
+* feat: Custom lang mapper regex and index ([@camflan](https://github.com/camflan) in [#122])
+* chore: ncu update & upgrade node 9.8.0 and yarn 1.5.1
+
 ## [v2.1.3]
 
 > Jan 26, 2018
