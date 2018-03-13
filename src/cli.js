@@ -33,6 +33,14 @@ program
     '-c, --message-context [context]',
     'Translation message context (defaults to no context)',
   )
+  .option(
+    '-l --lang-mapper-pattern <pattern>',
+    'Custom regex to use for lang mapping.',
+  )
+  .option(
+    '-i --lang-mapper-pattern-index [index]',
+    'When specifying a custom lang-mapper-pattern, the index of match to use for the lang mapping. Default is 1, index is ignored if not using a custom lang mapping regex',
+  )
   .action(require('./filterPOAndWriteTranslateSync'));
 
 program.parse(process.argv);
