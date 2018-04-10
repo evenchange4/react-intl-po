@@ -25,6 +25,7 @@ function filterPOAndWriteTranslateSync(
     langMapperPattern,
     langMapperPatternIndex,
     output,
+    indentation,
   },
 ) {
   const placeholder = R.pipe(
@@ -66,7 +67,7 @@ function filterPOAndWriteTranslateSync(
   // Output
   if (isAJSONFile(output)) {
     mkdirp.sync(path.dirname(output)); // ensure the output folder exists
-    fs.writeFileSync(output, JSON.stringify(result, null, 0));
+    fs.writeFileSync(output, JSON.stringify(result, null, indentation));
     console.log(chalk.green(`> [react-intl-po] write file -> ${output} ✔️\n`));
   } else {
     mkdirp.sync(output); // ensure the output folder exists
@@ -74,7 +75,7 @@ function filterPOAndWriteTranslateSync(
     Object.keys(result).forEach(lang => {
       fs.writeFileSync(
         path.join(output, `${lang}.json`),
-        JSON.stringify(result[lang], null, 0),
+        JSON.stringify(result[lang], null, indentation),
       );
       console.log(
         chalk.green(

@@ -75,3 +75,29 @@ it('should output correct filter merged file with id as messageContext', () => {
   });
   expect(JSON.parse(fs.readFileSync(output, 'utf8'))).toMatchSnapshot();
 });
+
+it('should output json file with spaces if indentation number is used', () => {
+  const messagesPattern = './test/messages/**/*.json';
+  const output = './test/temp/translations-defaultMessage-indent4.json';
+  const indentation = 4;
+
+  filterPOAndWriteTranslateSync('./test/po/mcs-public.*.po', {
+    messagesPattern,
+    output,
+    indentation,
+  });
+  expect(fs.readFileSync(output, 'utf8')).toMatchSnapshot();
+});
+
+it('should output json file with prefix char if indentation char is used', () => {
+  const messagesPattern = './test/messages/**/*.json';
+  const output = './test/temp/translations-defaultMessage-indentchar.json';
+  const indentation = '\t\t';
+
+  filterPOAndWriteTranslateSync('./test/po/mcs-public.*.po', {
+    messagesPattern,
+    output,
+    indentation,
+  });
+  expect(fs.readFileSync(output, 'utf8')).toMatchSnapshot();
+});
