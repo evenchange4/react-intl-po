@@ -81,7 +81,7 @@ $ rip po2json './node_modules/mcs-translation/po/mcs-public*.po' \`
 | `-c, --message-context [context]`         | [Optional] Translation message context (defaults to no context)                                                                                                                                                                                   |
 | `-l, --lang-mapper-pattern <pattern>`     | [Optional] Custom regex to use for lang mapping. [PR#122](https://github.com/evenchange4/react-intl-po/pull/122)                                                                                                                                  |
 | `-i, --lang-mapper-pattern-index [index]` | [Optional] When specifying a custom lang-mapper-pattern, the index of match to use for the lang mapping. Default is 1, index is ignored if not using a custom lang mapping regex. [PR#122](https://github.com/evenchange4/react-intl-po/pull/122) |
-| `--indentation <number|char>`             | [Optional] Specify a number of spaces or a set of characters to be used before each entry of the resulting json file. Defaults to `null`, which means the entries are not prefixed with spaces.                                                   |
+| `--indentation <number\|char>`             | [Optional] Specify a number of spaces or a set of characters to be used before each entry of the resulting json file. Defaults to `null`, which means the entries are not prefixed with spaces.                                                   |
 
 ## Property
 
