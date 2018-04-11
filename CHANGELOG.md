@@ -4,6 +4,13 @@
 
 > Unreleased
 
+## [v2.2.1]
+
+> April 11, 2018
+
+* feat: Support --indentation option ([@matheusd](https://github.com/matheusd) in [#128])
+* chore: ncu update & use node 9.11.1
+
 ## [v2.2.0]
 
 > March 13, 2018
