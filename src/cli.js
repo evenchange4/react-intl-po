@@ -2,6 +2,8 @@
 
 import program from 'commander';
 
+const numberOrChars = s => (/^\d+$/.test(s) ? parseInt(s, 10) : s);
+
 program
   .command('json2pot <srcPatterns>')
   .option(
@@ -40,6 +42,11 @@ program
   .option(
     '-i, --lang-mapper-pattern-index [index]',
     'When specifying a custom lang-mapper-pattern, the index of match to use for the lang mapping. Default is 1, index is ignored if not using a custom lang mapping regex',
+  )
+  .option(
+    '--indentation <number|characters>',
+    'Number of spaces or characters to use for indenting (adding space) to the output json entries.',
+    numberOrChars,
   )
   .action(require('./filterPOAndWriteTranslateSync'));
 
