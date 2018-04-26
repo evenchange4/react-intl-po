@@ -148,3 +148,24 @@ exports[`should output one merged file if a *json file* is set 1`] = `
   }
 }
 `;
+
+exports[`should output sorted file if sortById is used 1`] = `
+{
+  "zh-CN": {
+    "App.Creator 1": "建立者（簡中）",
+    "App.Creator 2": "建立者（簡中）",
+    "App.errorButton": "",
+    "App.errorMessage": "",
+    "NotFound.Creator": "建立者（簡中）",
+    "NotFound.errorButton": ""
+  },
+  "zh-TW": {
+    "App.Creator 1": "建立者",
+    "App.Creator 2": "建立者",
+    "App.errorButton": "",
+    "App.errorMessage": "",
+    "NotFound.Creator": "建立者",
+    "NotFound.errorButton": ""
+  }
+}
+`;
