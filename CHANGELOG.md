@@ -4,6 +4,13 @@
 
 > Unreleased
 
+## [v2.2.2]
+
+> April 30, 2018
+
+* feat: Add sort-by-id option to po2json([@matheusd](https://github.com/matheusd) in [#134])
+* chore: ncu update
+
 ## [v2.2.1]
 
 > April 11, 2018
