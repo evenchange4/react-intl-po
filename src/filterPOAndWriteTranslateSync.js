@@ -26,8 +26,11 @@ function filterPOAndWriteTranslateSync(
     langMapperPatternIndex,
     output,
     indentation,
+    sortById,
   },
 ) {
+  const sort = sortById ? R.sortBy(R.prop('id')) : R.identity;
+
   const placeholder = R.pipe(
     readAllMessageAsObjectSync,
     // 1. Object { messagekey: { messageContext: [[] , []] } }
@@ -36,6 +39,7 @@ function filterPOAndWriteTranslateSync(
     R.map(R.values),
     // 3. Array [[], []]
     R.flatten,
+    sort,
     // 4. Array []
     R.indexBy(R.prop('id')),
     // 5. Object { id: [] }
