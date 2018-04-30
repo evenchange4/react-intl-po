@@ -101,3 +101,16 @@ it('should output json file with prefix char if indentation char is used', () =>
   });
   expect(fs.readFileSync(output, 'utf8')).toMatchSnapshot();
 });
+
+it('should output sorted file if sortById is used', () => {
+  const messagesPattern = './test/messages/**/*.json';
+  const output = './test/temp/translations-defaultMessage-indentchar.json';
+  const sortById = true;
+
+  filterPOAndWriteTranslateSync('./test/po/mcs-public.*.po', {
+    messagesPattern,
+    output,
+    sortById,
+  });
+  expect(JSON.parse(fs.readFileSync(output, 'utf8'))).toMatchSnapshot();
+});

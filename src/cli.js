@@ -48,6 +48,10 @@ program
     'Number of spaces or characters to use for indenting (adding space) to the output json entries.',
     numberOrChars,
   )
+  .option(
+    '--sort-by-id',
+    'If specified, the entries of each language are sorted by id before being output',
+  )
   .action(require('./filterPOAndWriteTranslateSync'));
 
 program.parse(process.argv);
