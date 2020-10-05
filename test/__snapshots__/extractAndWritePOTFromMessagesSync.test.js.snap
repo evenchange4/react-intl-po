@@ -25,6 +25,13 @@ msgid "App.Creator 2"
 msgstr ""
 
 #: ./test/messages/src/containers/App/App.json
+#. [App.Creator Empty message] - An Empty message
+#. defaultMessage is:
+#. 
+msgid "App.Creator Empty message"
+msgstr ""
+
+#: ./test/messages/src/containers/App/App.json
 #. [App.errorButton] - Click error Button
 #. defaultMessage is:
 #. Go to MCS website
@@ -63,6 +70,13 @@ msgstr ""
 "MIME-Version: 1.0\\n"
 "X-Generator: react-intl-po\\n"
 
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator Empty message] - An Empty message
+#. defaultMessage is:
+#. 
+msgid ""
+msgstr ""
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.Creator 1] - Creator 1
@@ -108,6 +122,14 @@ msgstr ""
 "MIME-Version: 1.0\\n"
 "X-Generator: react-intl-po\\n"
 
+
+#: ./test/messages/src/containers/App/App.json
+#. [App.Creator Empty message] - An Empty message
+#. defaultMessage is:
+#. 
+msgctxt "App.Creator Empty message"
+msgid ""
+msgstr ""
 
 #: ./test/messages/src/containers/App/App.json
 #. [App.Creator 1] - Creator 1

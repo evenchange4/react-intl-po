@@ -49,6 +49,16 @@ exports[`should return messages object with default messageKey 1`] = `
         "filename": "./test/messages/src/containers/NotFound/messages.json"
       }
     ]
+  },
+  "": {
+    "": [
+      {
+        "id": "App.Creator Empty message",
+        "description": "An Empty message",
+        "defaultMessage": "",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
   }
 }
 `;
@@ -91,6 +101,16 @@ exports[`should return messages object with description as key 1`] = `
         "id": "App.Creator 2",
         "description": "Creator 2",
         "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
+  },
+  "An Empty message": {
+    "": [
+      {
+        "id": "App.Creator Empty message",
+        "description": "An Empty message",
+        "defaultMessage": "",
         "filename": "./test/messages/src/containers/App/App.json"
       }
     ]
@@ -153,6 +173,16 @@ exports[`should return messages object with id as context 1`] = `
         "filename": "./test/messages/src/containers/NotFound/messages.json"
       }
     ]
+  },
+  "": {
+    "App.Creator Empty message": [
+      {
+        "id": "App.Creator Empty message",
+        "description": "An Empty message",
+        "defaultMessage": "",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
   }
 }
 `;
@@ -195,6 +225,16 @@ exports[`should return messages object with id as key 1`] = `
         "id": "App.Creator 2",
         "description": "Creator 2",
         "defaultMessage": "Creator",
+        "filename": "./test/messages/src/containers/App/App.json"
+      }
+    ]
+  },
+  "App.Creator Empty message": {
+    "": [
+      {
+        "id": "App.Creator Empty message",
+        "description": "An Empty message",
+        "defaultMessage": "",
         "filename": "./test/messages/src/containers/App/App.json"
       }
     ]

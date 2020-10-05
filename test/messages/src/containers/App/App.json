@@ -18,5 +18,10 @@
     "id": "App.Creator 2",
     "description": "Creator 2",
     "defaultMessage": "Creator"
+  },
+  {
+    "id": "App.Creator Empty message",
+    "description": "An Empty message",
+    "defaultMessage": ""
   }
 ]
