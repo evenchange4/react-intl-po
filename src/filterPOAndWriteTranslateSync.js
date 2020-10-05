@@ -44,7 +44,10 @@ function filterPOAndWriteTranslateSync(
     R.indexBy(R.prop('id')),
     // 5. Object { id: [] }
     R.mapObjIndexed(
-      R.converge(R.concat, [getContext(messageContext), R.prop(messageKey)]),
+      R.converge(R.concat, [
+        getContext(messageContext),
+        R.propOr('', messageKey),
+      ]),
     ),
     // 6. Object { id: key }, key = (messageContext + messagekey)
   )(messagesPattern, messageKey, messageContext);
