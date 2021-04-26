@@ -41,7 +41,7 @@
     "codecov": "3.0.2",
     "eslint": "4.19.1",
     "eslint-config-airbnb-base": "12.1.0",
-    "eslint-config-prettier": "2.9.0",
+    "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.11.0",
     "eslint-plugin-jest": "21.15.1",
     "eslint-plugin-prettier": "2.6.0",
